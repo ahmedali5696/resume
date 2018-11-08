@@ -1,0 +1,607 @@
+/* 
+Theme Named: EliteCorp
+Theme Coder: Ahmed Ali
+PSD Designer:Mahdi Hassan
+    Main Colors: #08526d Blue, #ec1c23 Red
+**********************************************************/
+
+/* Main
+*********************************/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold !important;
+    margin: 0
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    margin-bottom: 25px !important
+}
+
+.darkBlueText {
+    color: #0c5975 !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.navbar-nav li a.active {
+    color: #ec1c23 !important;
+}
+
+.overlaye {
+    background-color: rgba(0, 0, 0, 0.60) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gray-font {
+    color: #687074
+}
+
+/* Upper Bar 
+*********************************/
+
+.upper-bar {
+    background-color: #08526d;
+    color: #fff;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.upper-bar span {
+    color: #98a4aa;
+}
+
+.phone-no {
+    margin-right: 10px;
+    padding-top: 2px;
+}
+
+.email {
+    display: inline-block;
+    padding-top: 2px;
+}
+
+.getQuote {
+    display: inline-block;
+    border: 2px solid #1f8bb2;
+    padding: 2px 8px;
+    margin-left: 45px;
+}
+
+
+/* Navbar
+*********************************/
+
+.navbar {
+    padding: 0.3rem 1rem;
+}
+
+.navbar-toggler-icon {
+    color: #0c5975 !important;
+}
+
+.navbar-brand .corp,
+section.footer h2 .corp {
+    font-weight: 300;
+    color: #ec1c23;
+}
+
+.navbar-nav li a {
+    color: #0c5975 !important;
+    text-transform: uppercase;
+}
+
+.navbar-nav li a:hover {
+    color: #ec1c23 !important;
+}
+
+@media (max-width: 575px) {
+    .navbar-nav li a {
+        padding-left: 10px !important;
+    }
+
+    .navbar-nav li a:hover {
+        color: #fff !important;
+        background-color: #ec1c23 !important;
+    }
+}
+
+/* Carousel Header
+*********************************/
+
+div.header {
+    height: 83vh;
+    background: url(../img/banner.jpg);
+    background-size: cover;
+    overflow: hidden
+}
+
+#carouselHeader .carousel-item p {
+    color: #fff;
+    text-align: left;
+    padding: 200px 0;
+    font-size: 50px;
+    font-weight: bolder
+}
+
+@media (max-width:575px) {
+    #carouselHeader .carousel-item p {
+        padding: 100px 0;
+        font-size: 40px
+    }
+}
+
+#carouselHeader .carousel-item p span {
+    padding: 0 6px;
+}
+
+#carouselHeader .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%
+}
+
+/* Features
+*********************************/
+
+@media (max-width:991px) {
+    .features div {
+        margin-bottom: 15px
+    }
+
+    .mr-bot-0 {
+        margin-bottom: 0 !important
+    }
+}
+
+.feat i {
+    color: #fff;
+    background-color: #ed1d24;
+    height: 53px;
+    width: 52px;
+    line-height: 1.7;
+    margin-bottom: 15px
+}
+
+.feat h5 {
+    font-weight: bold;
+    color: #0c5975
+}
+
+/* Overview
+*********************************/
+
+.overview {
+    background-color: #f0f5f7;
+    padding: 80px 0
+}
+
+.start {
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin: 20px auto !important
+}
+
+.overview button {
+    border-radius: 0;
+    background-color: #ed1d24;
+    padding: 4px 30px
+}
+
+.overview p {
+    width: 60%
+}
+
+/* Featured Work
+*********************************/
+
+.fwork {
+
+    padding-bottom: 0
+}
+
+.fwork p {
+    width: 60%
+}
+
+/* protofillo */
+
+.fwork .protofillo {
+    padding: 30px 0;
+    padding-bottom: 0
+}
+
+.protofillo .category {
+    margin-right: 0 !important;
+    margin-left: 10% !important
+}
+
+@media (max-width:991px) {
+    .protofillo .category {
+        margin-left: 5% !important
+    }
+}
+
+.fwork .protofillo a {
+    color: #0c5975 !important;
+    border: 1px solid #0b506a;
+    padding: 6px 15px;
+    margin: 2px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+div.protofillo .selected,
+div.protofillo a:hover {
+    background-color: #ed1d24;
+    color: #fff !important
+}
+
+.protofillo a:first-of-type {
+    padding: 6px 23px
+}
+
+.protofillo ul {
+    margin-top: 30px !important
+}
+
+.protofillo ul li img {
+    width: 337px;
+    height: 337px;
+    transition: .2s all ease-in-out
+}
+
+.protofillo .content ul:not(.all) {
+    display: none
+}
+
+.protofillo .content ul li img:hover {
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.20),
+    -5px -5px 15px 1px rgba(0, 0, 0, 0.20);
+    transform: scale(1.05)
+}
+
+/* Last Posts
+*********************************/
+
+.lastPosts {
+    overflow: hidden;
+    background-color: #f0f5f7;
+
+}
+
+.lastPosts p.aboutPosts {
+    width: 60%;
+    margin-bottom: 50px !important
+}
+
+.post {
+    margin-bottom: 10px;
+    padding: 20px 15px
+}
+
+.post:hover {
+    background-color: #f7fafb;
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.15),
+    -5px -5px 15px 1px rgba(0, 0, 0, 0.15);
+
+}
+
+.posts h6 {
+    color: #0c5975 !important;
+}
+
+.posts p {
+    font-size: 13px;
+}
+
+@media (max-width:767px) {
+    .posts {
+        width: 73%;
+    }
+}
+
+.posts p.date {
+    color: #c4c4c4;
+    font-size: 12px
+}
+
+.posts a {
+    color: #ed1d24 !important;
+    font-size: 13px
+}
+
+
+/* Testimonials
+*********************************/
+
+div.testi {
+    background: url('../img/tstmonia/testimonial-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 110px 0;
+    position: relative
+}
+
+div.testi p {
+    margin: 0
+}
+
+#carouselTestimonials .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%
+}
+
+.testi .carousel-inner h6 {
+    margin: 0;
+    margin-top: 10px
+}
+
+.testi .carousel-inner p:first-of-type {
+    font-size: 13px;
+    font-weight: 200;
+    margin-bottom: 20px
+}
+
+#carouselTestimonials a[href="#carouselTestimonials"] {
+    background-color: #000 !important;
+    height: 60px;
+    width: 60px;
+    top: 200px;
+}
+
+#carouselTestimonials a[href="#carouselTestimonials"]:hover {
+    background-color: #ed1d24 !important;
+}
+
+@media (max-width:350px) {
+    #carouselTestimonials a[href="#carouselTestimonials"] {
+        display: none !important
+    }
+
+}
+
+/* Pricing Table
+*********************************/
+
+.pricing .plans .pl {
+    background-color: #fff;
+    margin: 30px 15px !important;
+    padding: 40px 0;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.05),
+    0 0 30px 1px rgba(0, 0, 0, 0.05)
+}
+
+.pricing .plans .pl h5 {
+    color: #0c5975 !important;
+}
+
+.plans .pl p.plDes {
+    font-size: 13px;
+    font-weight: 300
+}
+
+.plans .pl p.price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c5975 !important;
+    background-color: #fbfbfb;
+    padding: 7px
+}
+
+.plans .plan2 {
+    position: relative;
+    bottom: 11px
+}
+
+.plans .plan2 p:nth-of-type(2) {
+    background-color: #ed1d24;
+    color: #fff !important
+}
+
+.pl p.price span {
+    font-size: 15px;
+}
+
+.plans .pl button {
+    border-radius: 0;
+    padding: 5px 25px;
+    margin: 5px;
+    background-color: #ed1d24;
+    letter-spacing: 3px
+}
+
+.plans .pl button:hover {
+    background-color: #da1e24;
+    border-color: transparent
+}
+
+.plans .plan2 button {
+    background-color: #08526d;
+}
+
+.plans .plan2 button:hover {
+    background-color: #05465e;
+}
+
+/* Choose Us
+*********************************/
+
+section.chooseUs {
+    padding-top: 0;
+    color: #fff;
+    overflow: hidden
+}
+
+.chooseUs .us {
+    padding: 0;
+    overflow: hidden
+}
+
+.chooseUs .us img {
+    max-height: 486px;
+}
+
+.chooseUs .ourVision {
+    background-color: #08526d;
+    padding: 75px 37px
+}
+
+.chooseUs .ourVision p {
+    line-height: 1.7;
+    color: #f7f7f7
+}
+
+.chooseUs .ourVision a {
+    border-radius: 0;
+    letter-spacing: 3px;
+    background-color: #ed1d24;
+    margin-top: 20px
+}
+
+/* Statistics
+*********************************/
+
+section.statistics {
+    padding: 0;
+    color: #08526d !important;
+}
+
+.statistics div {
+    margin-bottom: 15px
+}
+
+.statistics h2 {
+    margin-bottom: 0 !important;
+    margin-top: 5px
+}
+
+.statistics p {
+    color: #ed1d24;
+    font-weight: 300
+}
+
+/* Contact Us
+*********************************/
+
+section.contactUs {
+    background-color: #ed1d24;
+    color: #fdfdfd;
+}
+
+.contactUs .grp {
+    margin-left: 83px;
+    margin-right: 83px;
+}
+
+.contactUs .workTogether {
+    margin-bottom: 10px
+}
+
+.contactUs .workTogether p {
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0
+}
+
+.contactUs .contact button {
+    margin-top: 7px;
+    background-color: transparent;
+    color: #fdfdfd;
+    border: 1px solid #fdfdfd;
+    padding: 5px 15px;
+    letter-spacing: 2px;
+    cursor: pointer
+}
+
+/* Footer
+*********************************/
+
+section.footer {
+    padding-bottom: 0 !important
+}
+
+section.footer h6 {
+    margin-bottom: 40px;
+    color: #08526d !important;
+}
+
+@media (max-width: 767px) {
+    section.footer h6 {
+        margin: 0;
+    }
+}
+
+section.footer a {
+    color: #08526d !important;
+}
+
+section.footer div {
+    margin-bottom: 25px
+}
+
+section.footer .about p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+section.footer .about a {
+    color: #08526d !important;
+}
+
+.footer .helpfulLinks ul:nth-of-type(2) {
+    margin-right: 50px
+}
+
+section.footer .helpfulLinks,
+.footer .helpfulLinks ul li a {
+    color: #08526d !important;
+}
+
+.footer .helpfulLinks ul li i {
+    color: #687074 !important;
+}
+
+section.footer .conUs p {
+    line-height: 3
+}
+
+/* Copyright
+*********************************/
+
+section.cr {
+    padding: 0;
+}
+
+.cr .line {
+    height: 1px;
+    background-color: rgba(104, 112, 116, 0.27)
+}

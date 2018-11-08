@@ -1,0 +1,413 @@
+/* General 
+*****************************/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    -webkit-outline: none;
+    -moz-outline: none;
+    outline: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #8c98ab !important;
+    -webkit-box-shadow: inset 0 0 0px 9999px rgba(255, 255, 255, 0);
+    -webkit-text-fill-color: #8c98ab !important;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #399bda;
+}
+
+/* Main 
+*****************************/
+
+.logo {
+    height: 74px;
+    width: 100%;
+    max-width: 205px;
+    margin-top: 8vh;
+}
+
+.margin {
+    margin: 3vh 0;
+}
+
+.loginContainer {
+    background-color: #f1f3f7;
+    color: #636b78;
+    min-height: 100vh;
+    min-width: 420px;
+    font-family: Roboto Condensed, sans-serif;
+    font-size: 17px;
+    -webkit-box-shadow: 0 -1px 60px 2px rgba(0, 0, 0, 0.34);
+    box-shadow: 0 -1px 60px 2px rgba(0, 0, 0, 0.34);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Form 
+*****************************/
+
+form a {
+    color: #399bda;
+    font-size: 14px;
+}
+
+
+.loginform {
+    width: 280px;
+    margin-top: 55px;
+    margin-bottom: 67px;
+    overflow: hidden;
+}
+
+
+/* User Input
+************************************/
+
+.user {
+    position: relative;
+}
+
+.user label {
+    position: absolute;
+    color: #8c98ab;
+    font-size: 15px;
+    text-align: left;
+    bottom: 35px;
+    z-index: 1;
+    pointer-events: none;
+    left: 0;
+    display: block;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+    font-weight: normal;
+}
+
+.user input[type="text"] {
+    background-color: transparent;
+    border: 0 solid;
+    border-bottom: 1px solid #636b78;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.user input[type="text"]:focus + label {
+    transform: scale(.875) translateX(-5px);
+    bottom: 63px;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+}
+
+.has-data label {
+    transform: scale(.875) translateX(-5px);
+    bottom: 63px;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+}
+
+#username:focus {
+    border-bottom: 1px solid #2979ab;
+}
+
+img[alt="exclamation"] {
+    position: relative;
+    bottom: 42px;
+    left: 263px;
+}
+
+.messege {
+    position: relative;
+    display: inline-block;
+    height: 18px;
+    width: 16px;
+    bottom: 37px;
+    left: 243px;
+    z-index: 4;
+}
+
+.messege .messegetext {
+    visibility: hidden;
+    width: 280px;
+    background-color: #515d6f;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 7px 0;
+    position: absolute;
+    z-index: 4;
+    bottom: -416%;
+    left: 50%;
+    margin-left: -271px;
+    opacity: 0;
+}
+
+.messege .messegetext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 90%;
+    margin-left: -5px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.messege:hover .messegetext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.req {
+    position: relative;
+    z-index: 3;
+    display: none;
+    color: #e70000;
+    font-size: 14px;
+    bottom: 40px;
+    border-top: 1px solid #e70000;
+    padding-top: 2px;
+}
+
+/* Pass Input
+***********************************/
+
+.pass {
+    position: relative;
+}
+
+.pass label {
+    position: absolute;
+    color: #8c98ab;
+    font-size: 15px;
+    text-align: left;
+    bottom: -4px;
+    z-index: 1;
+    pointer-events: none;
+    left: 0;
+    display: block;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+    font-weight: normal;
+}
+
+.pass input[type="password"] {
+    background-color: transparent;
+    border: 0 solid;
+    border-bottom: 1px solid #636b78;
+    width: 100%;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.pass input[type="password"]:focus + label {
+    transform: scale(.875) translateX(-5px);
+    bottom: 21px;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+}
+
+.has-pass label {
+    transform: scale(.875) translateX(-5px);
+    bottom: 21px;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+}
+
+#password:focus,
+.password:focus {
+    border-bottom: 1px solid #2979ab;
+}
+
+.req1 {
+    position: relative;
+    z-index: 3;
+    display: none;
+    color: #e70000;
+    font-size: 14px;
+    bottom: 1px;
+    border-top: 1px solid #e70000;
+    padding-top: 2px;
+}
+
+
+/* Sign
+**********************************/
+
+.singIn {
+    background-color: #ff4800;
+    color: #fff;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 18px;
+    padding: 4px 20px;
+    -webkit-transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+    transition: all .45s cubic-bezier(.23, 1, .32, 1) 0ms;
+    cursor: pointer;
+    margin-top: 3%;
+    min-height: 35px;
+    line-height: 1.15;
+}
+
+.singIn:hover {
+    border-bottom: 1px solid rgba(168, 168, 168, 0.71);
+    border-right: 1px solid rgba(168, 168, 168, 0.71);
+    -webkit-box-shadow: 1px 1px 6px rgba(168, 168, 168, 0.69),
+    -1px -1px 6px rgba(168, 168, 168, 0.69);
+    box-shadow: 1px 1px 6px rgba(168, 168, 168, 0.69),
+    -1px -1px 6px rgba(168, 168, 168, 0.69);
+}
+
+.singIn > a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.15;
+}
+
+.signinenter {
+    background-color: #c9cdd7;
+    color: #c9cdd7;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0),
+    0 0 0 rgba(255, 255, 255, 0);
+}
+
+.grey {
+    background-color: #c9cdd7;
+}
+
+.singUp {
+    text-align: center;
+    color: #636b78;
+    margin-top: 1vh;
+    font-size: 18px;
+}
+
+.singUp a {
+    font-size: 18px;
+}
+
+/* Footer 
+*****************************/
+
+.footer {
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    right: -56px;
+    width: 420px;
+    color: #636b78;
+    font-size: 14px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.footer p {
+    display: inline-block;
+    margin: 0;
+}
+
+.footer a {
+    color: #636b78;
+}
+
+.footer a:hover {
+    color: #636b78;
+    text-decoration: underline;
+}
+
+.footer .contact::after,
+.footer p::after {
+    content: ' |';
+    color: #c4cbdb;
+    padding: 0 3px;
+    font-size: 16px;
+}
+
+/* Background 
+*****************************/
+
+.background {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 75%;
+    min-height: 100%;
+    background: url(../img/background.jpg) no-repeat 0;
+    background-size: cover;
+    background-position: left 50% top 50%;
+}
+
+/* Phone 
+**********************************/
+
+.p-logo {
+    height: 74px;
+    width: 100%;
+    max-width: 205px;
+    margin-top: 8vh;
+    overflow: hidden;
+}
+
+.p-loginContainer {
+    background-color: #f1f3f7;
+    color: #636b78;
+    min-height: 100vh;
+    font-family: Roboto Condensed, sans-serif;
+    font-size: 17px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.p-loginform {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    margin-bottom: 67px;
+    overflow: hidden;
+}
+
+.p-footer {
+    position: absolute;
+    bottom: 0;
+    color: #636b78;
+    font-size: 14px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-align: center;
+    right: -50%;
+    left: -50%;
+}
+
+.p-footer p {
+    display: inline-block;
+    margin: 0;
+}
+
+.p-footer a {
+    color: #636b78;
+}
+
+.p-footer a:hover {
+    color: #636b78;
+    text-decoration: underline;
+}
+
+.p-footer .contact::after,
+.p-footer p::after {
+    content: ' |';
+    color: #c4cbdb;
+    padding: 0 3px;
+    font-size: 16px;
+}

