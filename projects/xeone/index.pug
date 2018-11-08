@@ -1,0 +1,386 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title XeOne
+    link(rel='stylesheet' href='css/bootstrap.min.css')
+    link(rel='stylesheet' href='css/font-awesome.min.css')
+    link(rel='stylesheet' href='css/owl.carousel.min.css')
+    link(rel='stylesheet' href='css/owl.theme.default.min.css')
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400,900')
+    link(rel='icon' href='img/favicon.png' )
+  
+  body
+  
+    //- Navigation Bar
+    nav(class='navbar navbar-expand-lg navbar-light')
+      .container
+        a(class='navbar-brand d-sm-inline-block d-lg-none' href='#')
+            h1
+              span Xe
+              .
+                One
+              span .
+        button.navbar-toggler(data-toggle='collapse' data-target='#phoneNavbar' aria-controls='phoneNavbar')
+          i(class='fa fa-bars')
+        
+        div(class='navbar-collapse collapse' id='phoneNavbar')
+          ul(class='navbar-nav mr-auto')
+            - var navLiLeft= ['Home', 'Features', 'Team', 'Portofilo']
+            each liItems in navLiLeft
+              li(class='nav-item mr-5')
+                a.nav-link(href='#') #{liItems}
+          
+          a(class='navbar-brand d-lg-inline-block d-sm-none' href='#')
+            h1
+              span Xe
+              .
+                One
+              span .
+
+          ul(class='navbar-nav ml-auto')
+            - var navLiRight= ['Packages', 'Clients', 'Blog', 'Contant']
+            each liItems in navLiRight
+              li(class='nav-item ml-5')
+                a.nav-link(href='#') #{liItems}
+    
+    //- Header
+    header#header
+      div(class='carousel slide header' data-ride='carousel' id='carouselHeader')
+        ol(class='carousel-indicators flex-column d-none d-md-flex')
+          - for (var i = 0; i <= 2; i++)
+            li(data-target='#carouselHeader' data-slide-to=i)
+          li.active(data-target='#carouselHeader' data-slide-to='3')
+        div.carousel-inner
+          - for (var i = 0; i <= 2; i++)
+            div(class='carousel-item text-center')
+              p The Ultimate
+              h2.h1 Next Big Thing                   
+              p In One Page
+              h6 The Best Multipurpose One Page Template in Market
+              button.text-uppercase Learn More
+          div(class='carousel-item active text-center')
+              p The Ultimate
+              h2.h1 Next Big Thing                   
+              p In One Page
+              h6 The Best Multipurpose One Page Template in Market
+              button.text-uppercase Learn More
+
+    //- Services We Offer Section
+    section.services(id='services')
+      div(class='row design align-items-center m-0')
+        div(class='col-sm-12 col-md-6')
+          img.img-fluid(src='img/servicesWe/split-img1.jpg' alt='Creative Design')
+        div(class='col-sm-12 col-md-6 text-center padding-50')
+          h5(class='slideanim') Services We Offer
+          h2(class='slideanim') Creative Design
+          p.grayFont(class='slideanim') Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. Fusce faucibus nulla at viverra condimentum.
+          button.text-uppercase(class='slideanim') Design Works
+
+      div(class='row marketing align-items-center m-0')
+        div(class='col-sm-12 col-md-6 text-center padding-50')
+          h5(class='slideanim') Services We Offer
+          h2(class='slideanim')
+            span.text-uppercase Seo 
+            .
+              Marketing
+          p.grayFont(class='slideanim') Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus. Fusce faucibus nulla at viverra condimentum.
+          button.text-uppercase(class='slideanim') Design Works
+        div(class='col-sm-12 col-md-6')
+          img.img-fluid(src='img/servicesWe/split-img2.jpg' alt='Creative Design')
+
+    //- Work Process
+    section.workPro(class='text-center padding-7rem0' id='workPro')
+      h2(class='slideanim') Work Process
+      .container
+        div.row
+          - var x = 1
+          - var workH = ['Concept', 'Plan','Design', 'Development', 'Quality Check']
+          each h in workH
+            div(class='m-auto slideanim')
+              h3(class='m-auto font-weight-bold') #{'0' + x++}
+              h6.font-weight-bold #{h}
+              p Quisque tellus risus, adipisci viverra bibendum urna.
+
+    //- Creative Team
+    section.creativeTeam(id='creativeTeam' class='padding-7rem0 text-center')
+      h5(class='slideanim') Heros Behind The Company
+      h2(class='slideanim') Creative Team
+      p.grayFont(class='col-7 slideanim') Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.
+      div.container
+        div.row
+          div.person(class='m-auto slideanim')
+            img(class='img-fluid' src='img/creativeTeam/team-1.jpg')
+            div.personInfo
+              h3.h2(class='mb-0') Johny Walking
+              span CEO, The XeOne Company
+          div.person(class='m-auto slideanim')
+            img(class='img-fluid' src='img/creativeTeam/team-2.jpg')
+            div.personInfo(style='background: linear-gradient(90deg, #00e4ce 30%, #00abc9 70%)')
+              h3.h2(class='mb-0') Johny Walking
+              span CEO, The XeOne Company
+          div.person(class='m-auto slideanim')
+            img(class='img-fluid' src='img/creativeTeam/team-3.jpg')
+            div.personInfo
+              h3.h2(class='mb-0') Johny Walking
+              span CEO, The XeOne Company
+
+    //- Awesome Features
+    section.features(class='padding-7rem0' id='features')
+      div.container
+        div.row(class='justify-content-between')
+          div(class='feature slideanim col-xs-11 col-md-5 mb-xs-5 mb-md-0')
+            h5 Service We Offer
+            h2.mb-5 Awesome Features
+            p.grayFont Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.
+            button.text-uppercase Our Blog
+          div(class='featureImg slideanim col-sm-11 col-md-6 mt-5')
+            img(class='img-fluid' src='img/awesome--feature.png')
+
+    //- Creative Work 
+    section.creativeWork(id='creativeWork')
+      .container
+        .row(class='works justify-content-center')
+          div(class='col-xs-12 col-lg-6')
+            img(class='img-fluid' src='img/creativeWork/portfolio-1.jpg')
+
+          div(class='col-xs-12 col-lg-6 text-center')
+            h5 Portfolio Designs
+            h2 Creative Work
+            p.grayFont Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend,
+            img(class='img-fluid' src='img/creativeWork/portfolio-2.jpg')
+
+          div(class='col-xs-12 col-lg-6')
+            img(class='img-fluid' src='img/creativeWork/portfolio-3.jpg')
+
+          div(class='col-xs-12 col-lg-6')
+            img(class='img-fluid' src='img/creativeWork/portfolio-4.jpg')
+
+          div(class='projects slideanim col-xs-12 col-lg-6 d-flex')
+            div.d-inline-block
+              p.grayFont We’ve Completed More Than
+              h2 682
+              p.grayFont projects for our amazing clients,
+            button.text-uppercase View all work
+
+    //- Mobile Applications
+    section.mobApps(class='padding-7rem0' id='mobApps')
+      h5.text-center(class='slideanim') Yes We Provide Mobile Apps
+      h2.text-center(class='slideanim') Mobile Applications
+
+      .container
+        .row(class='justify-content-between mt-5')
+          div(class='text-right col-xs-12 col-md-4')
+            - for (var i = 1; i <= 3; i++)
+              div(class='mobItem slideanim d-flex mb-5 mt-4')
+                div
+                  h5(class='slideanim') Responsive Design
+                  p.grayFont This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet
+                span.text-center
+                  i(class='fa fa-mobile')
+
+          div(class='col-xs-12 col-md-4')
+            img.img-fluid(class='slideanim' src='img/responsive.png')
+
+          div(class='text-left col-xs-12 col-md-4')
+            - for (var i = 1; i <= 3; i++)
+              div(class='mobItem slideanim d-flex mb-5 mt-4')
+                span.text-center
+                  i(class='fa fa-mobile')
+                div(class='d-inline')
+                  h5(class='slideanim') Responsive Design
+                  p.grayFont This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet
+
+    //- Experience
+    section.experience(id='experience')
+      .row(class='justify-content-between')
+        div(class='expInfo slideanim col-xs-12 col-lg-5 head')
+          h3.font-weight-bold Our many years of experience in numbers
+          .divide
+          p We show you our professional achievements in numbers, which show the acquired skills and trust of many clients.
+  
+        div(class='expNum slideanim col-xs-12 col-lg-6 text-center mt-4')
+          .row(class='justify-content-between')
+            div(class='col-xs-12 col-sm-4 items')
+              i(class='fa fa-smile-o')
+              h3.font-weight-bold 2500+
+              p Satisfied customers
+            div(class='col-xs-12 col-sm-4 items')
+              i(class='fa fa-globe')
+              h3.font-weight-bold 9500+
+              p Completed consultations
+            div(class='col-xs-12 col-sm-4 items')
+              i(class='fa fa-desktop')
+              h3.font-weight-bold 6000+
+              p Carried out training
+
+    //- Our Packages
+    section.packages(class='padding-7rem0' id='packages')
+      .container
+        header(class='col-sm-12 col-md-8 offset-md-2 text-center')
+          h5(class='slideanim') Choose The Best One
+          h2(class='slideanim') Our Packages
+          p.grayFont(class='slideanim') Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus
+
+        .row(class='planes justify-content-between')
+          .starter(class='col-md-5 mt-5')
+            h2.mb-4 Starter Plan
+            p.grayFont If you are a small business and you are interested in small rebranding then this is a perfect plan for you
+            h3 $ 9.99 
+              span / month
+            ul(class='list-unstyled mt-4')
+              - var startList = ['Designing a small brand', 'Redesign the company logo', 'New visual design of the website', 'Deploying a website']
+              each li in startList
+                li(class='grayFont mt-3')
+                  i(class='fa fa-check mr-2')
+                  | #{li}
+              - var delList = ['Studio and product photography', 'Professional project support', 'Support and care']
+              each li in delList
+                li(class='grayFont mt-3 delet')
+                  i(class='fa fa-times mr-2')
+                  | #{li}
+            button(class='text-uppercase mt-4') Get Sarted
+
+          .business(class='col-md-5 mt-5')
+            h2.mb-4 Business Plan
+            p.grayFont If you are a small business and you are interested in small rebranding then this is a perfect plan for you
+            h3 $ 29.99 
+              span / month
+            ul(class='list-unstyled mt-4')
+              - var busList = ['Designing a small brand', 'Redesign the company logo', 'New visual design of the website', 'Deploying a website', 'Studio and product photography', 'Professional project support', 'Support and care']
+              each li in busList
+                li(class='grayFont mt-3')
+                  i(class='fa fa-check mr-2')
+                  | #{li}
+            button(class='text-uppercase mt-4') Get Sarted
+
+    //- Watch Our Video
+    section.ourVideo(class='padding-7rem0' id='ourVideo')
+      .container
+        h5 We have an excellent story
+        h2 Watch Our Video
+        button.text-uppercase(class='mt-3')
+          i(class='fa fa-play mr-2')
+          | Play Now
+
+    //- Testimonials
+    section.testimonials(class='text-center padding-7rem0' id='testimonials')
+      .container
+        h5(class='slideanim') Testimonials
+        h2(class='slideanim') What People Say
+
+        div(class='owl-carousel owl-theme owl-loaded owl-drag testiCaro')
+          div(class='owl-stage-outer')
+            div(class='owl-stage')
+              - for (var i = 1; i <= 3; i++) 
+                div(class='owl-item')
+                  div.innerItem(class='innerItemOne')
+                    i(class='fa fa-quote-right rounded-circle')
+                    p.grayFont Donec semper euismod nisi quis feugiat. Nullam finibus metus eget orci volutpat porta. Morbi quis arcu vulputate, dignissim mi ac, varius magna.
+                    img(class='rounded-circle m-auto' src='img/peopleSay/testimonial-1.jpg')
+                  h5 David Zucker
+                  p Businessman
+                div(class='owl-item')
+                  div.innerItem(class='innerItemTwo')
+                    i(class='fa fa-quote-right rounded-circle')
+                    p.grayFont Donec semper euismod nisi quis feugiat. Nullam finibus metus eget orci volutpat porta. Morbi quis arcu vulputate, dignissim mi ac, varius magna.
+                    img(class='rounded-circle m-auto' src='img/peopleSay/testimonial-2.jpg')
+                  h5 David Zucker
+                  p Businessman
+                div(class='owl-item')
+                  div.innerItem(class='innerItemThree')
+                    i(class='fa fa-quote-right rounded-circle')
+                    p.grayFont Donec semper euismod nisi quis feugiat. Nullam finibus metus eget orci volutpat porta. Morbi quis arcu vulputate, dignissim mi ac, varius magna.
+                    img(class='rounded-circle m-auto' src='img/peopleSay/testimonial-3.jpg')
+                  h5 David Zucker
+                  p Businessman
+
+    //- Our Clients
+    section.ourClients
+      .container
+        div(class='owl-carousel owl-theme owl-loaded owl-drag clientsCaro')
+          div(class='owl-stage-outer')
+            div(class='owl-stage')
+              - for (var i = 1; i <= 9; i++) 
+                div(class='owl-item')
+                  img(src='img/logo-4.png')
+
+    //- Latest Blog Post
+    section.latestBlog(id='latestBlog')
+      div(class='row')
+        div(class='col-sm-12 col-md-6 img-blog')
+          img.img-fluid(src='img/split-blog.jpg' alt='latestBlog')
+        div(class='col-sm-12 col-md-6 text-center blog m-auto')
+          h5(class='slideanim') Read Our News
+          h2(class='slideanim') Latest Blog Post
+          p.grayFont(class='slideanim') Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.
+          button.text-uppercase(class='slideanim') Read Full Story
+
+    //- Contact
+    section.contact(class='padding-7rem0' id='contact')
+      .container
+        .row(class='m-auto')
+          div.contactInfo(class='col-sm-12 col-md-6')
+            h5 Lets Get In Touch
+            h2.mb-5 Contact XeOne
+            p.grayFont(class='mb-5') West is not just about graphic design; it's more than that. We offer integral communication services, and we're responsible for our process and results. We thank each client and their projects.
+
+            .row(class='mr-auto ml-auto mb-5')
+              div.ourAddress(class='col-xs-12 col-sm-6')
+                h6.mb-4 Our Address
+                p.grayFont 123 Stree New York City , United States Of America.
+                a(class='text-uppercase' href='#') Get Directions
+              div.ourPhones(class='col-xs-12 col-sm-6')
+                h6.mb-4 Our Phone
+                p.grayFont(class='m-0') Office Telephone : 001 01085379709
+                p.grayFont Mobile : 001 63165370895
+                a(class='text-uppercase' href='#') Call Us
+
+            .row(class='m-auto')
+              div.ourEmail(class='col-xs-12 col-sm-6')
+                h6.mb-4 Our Email
+                p.grayFont(class='m-0') Main Email : admin@website.com
+                p.grayFont Inquiries : email@website.com
+                a(class='text-uppercase' href='#') Send a Message
+              div.ourSupp(class='col-xs-12 col-sm-6')
+                h6.mb-4 Our Support
+                p.grayFont(class='m-0') Main Support : info@website.com 
+                p.grayFont Sales : support@website
+                a(class='text-uppercase' href='#') Open a Ticket
+
+          div.contactForm(class='col-sm-12 col-md-6')
+            form
+              input(class='contactInput' type='text' name='first_name' placeholder='First Name:')
+              input(class='contactInput' type='text' name='last_name' placeholder='Last Name:')
+              input(class='contactInput' type='email' name='email' placeholder='Email:')
+              input(class='contactInput' type='tel' name='phone_number' placeholder='Phone:')
+              textarea(class='contactInput' class='mb-4' rows='7' name='message' placeholder='Message')
+              button(class='contactInput' type='submit' class='text-uppercase') submit request
+
+    //- Google Map
+    section.map
+      iframe(src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1512.1178395600182!2d-74.005925!3d40.712828!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1538677093626" width="100%" height="400" frameborder="0" style="border:none" allowfullscreen)
+
+    //- Footer
+    footer
+      div.socialLinks(class='slideanim text-center')
+        - var sIcons = ['fa-facebook', 'fa-twitter', 'fa-google-plus', 'fa-linkedin', 'fa-instagram']
+        each icon in sIcons
+          a(href='#')
+            i(class='rounded-circle fa '+icon)
+      div.copyRight(class='slideanim text-center')
+        p.grayFont &copy; 2018 XeOne. made with love by themesindustry
+
+    //- Scroll Top Button
+    a.scrollTop(href='#')
+      i(class='fa fa-arrow-up')
+
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/owl.carousel.min.js')
+    script(src='js/float-panel.js')
+    script(src='js/script.js')

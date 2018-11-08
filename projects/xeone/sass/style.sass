@@ -1,0 +1,856 @@
+// Main Colors //
+/////////////////
+$light-blue: #00bcd4
+$light-green: #00e4ce
+$muve: #49459e
+$light-muve: #892a5d
+$white: rgba(255, 255, 255, .98)
+$light: #f6f6f6
+$gray-font: #a5a5a5
+
+
+// General //////
+/////////////////
+$im: !important
+
+*
+  padding: 0 $im
+
+body
+  font-family: 'Lato', sans-serif
+
+input:focus,
+textarea:focus,
+button:focus
+  outline: none
+
+a
+  &:hover
+    text-decoration: none
+
+h2
+  font-family: 'Raleway', sans-serif
+  font-size: 55px
+  font-weight: 300
+
+h5
+  color: $light-blue
+
+@media screen and (max-width: 786px)
+  h2
+    font-size: 40px
+  h5
+    font-size: 1rem
+
+button
+  color: $white
+  padding: 14px 40px $im
+  font-size: 13px
+  font-weight: 900
+  border-radius: 50px
+  cursor: pointer
+
+.grayFont
+  color: $gray-font
+
+section
+  overflow: hidden
+
+.padding-7rem0
+  padding: 7rem 0 $im
+
+// Navigation Bar /////
+///////////////////////
+nav
+  padding: 20px $im
+  background: linear-gradient(90deg, $muve, $light-muve)
+
+  h1
+    padding-top: 10px $im
+    color: $white $im
+
+    span
+      &:nth-child(1)
+        font-weight: 200 $im
+
+      &:nth-child(2)
+        color: $light-blue
+      
+  button
+    i
+      color: $white
+
+  li
+    a
+      color: $white $im
+      
+      &:hover
+        color: $light-blue $im
+
+// Header /////////////
+///////////////////////
+#header
+  background: linear-gradient(90deg, $muve, $light-muve)
+
+  .header
+    color: $white
+    padding: 18px 0 $im
+    overflow: hidden
+
+    h2
+      margin: 0 $im
+      font-size: 60px $im
+      font-weight: 900 $im
+
+    p
+      margin: 0 
+      font-size: 60px
+      font-weight: 300
+
+    h6
+      margin-top: 20px
+      font-size: 22px $im
+      font-weight: 300
+
+    button
+      margin-top: 35px
+      margin-bottom: 25px
+      background-color: $light-blue
+      border: 1px solid transparent
+      animation: blur 2s ease-in
+      &:hover
+        background-color: transparent
+        border: 1px solid $white
+
+    .carousel-indicators
+      top: 0
+      left: 80%
+
+      li
+        width: 15px
+        height: 15px
+        margin-top: 5px
+        margin-bottom: 5px
+        border-radius: 50%
+
+    .carousel-inner
+      animation: fadeIn 2s ease-in
+
+  @media screen and (max-width: 540px)
+    .header
+      h2
+        font-size: 35px $im
+      p
+        font-size: 35px
+      h6
+        font-size: 18px $im
+      button
+        padding: 10px 25px $im
+        font-size: 11px
+
+// Services We Offer //
+///////////////////////
+.services
+  .padding-50
+    padding: 50px $im
+
+  img
+    height: 550px
+
+  h5
+    animation: slideInUp 1s ease-in-out, fadeIn 1s ease-in-out
+
+  h2
+    margin-bottom: 25px
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+  p
+    animation: slideInUp 2s ease-in-out, fadeIn 2s ease-in-out
+
+  button
+    margin-top: 50px
+    background-color: $light-blue
+    border: none
+    transition: all .15s linear
+    animation: slideInUp 2.5s ease-in-out, fadeIn 2.5s ease-in-out
+    &:hover
+      background-color: $light-muve
+
+// Work Process ///////
+///////////////////////
+.workPro
+  color: $white
+  background: linear-gradient(90deg, $light-green 30%, $light-blue 70%)
+
+  h2
+    animation: slideInUp 1s ease-in-out
+
+  .row
+    div
+      flex-basis: 192px
+      padding: 60px 10px 0 10px $im
+      cursor: pointer
+      position: relative
+      animation: fadeIn 3.5s ease-in-out
+
+      &:hover
+        h3
+          background-color: $white
+          color: $light-blue
+
+      &:before,
+      &:after
+        content: ''
+        height: 1px
+        width: 50%
+        top: 105px
+        background-color: rgba(255, 255, 255, .6)
+        position: absolute
+        margin: 0 -45px
+
+      &:before
+        left: 0
+
+      &:after
+        right: 0
+
+    h3
+      width: 90px
+      height: 90px
+      line-height: 85px
+      border: 1px solid $white
+      border-radius: 50%
+      transition: all .3s ease-in-out
+
+    h6
+      margin: 30px 0 30px 0
+
+    p
+      font-size: 13px
+
+
+// Creative Team ///////
+///////////////////////
+.creativeTeam
+  background-color: $light
+
+  h5
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+  h2
+    animation: slideInUp 1s ease-in-out, fadeIn 1s ease-in-out
+
+  p
+    margin: 0 auto 40px auto
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+  .person
+    width: 330px
+    padding: 0 0 89px 0 $im
+    color: $white
+    position: relative
+    animation: slideInUp 2s ease-in-out, fadeIn 2s ease-in-out
+
+    img
+      padding-bottom: 20px $im
+      border: 20px solid $white
+
+    .personInfo
+      width: 290px
+      padding: 20px $im
+      background: linear-gradient(90deg, $muve 30%, $light-muve 70%)
+      position: absolute
+      bottom: 27px
+      left: 20px
+      span
+        font-size: 13px
+
+// Awesome Features ////
+///////////////////////
+.features
+  .feature
+    animation: slideInLeft 1s ease-in-out, fadeIn 1s ease-in-out
+    p
+      font-size: 15px
+  
+    button
+      margin-top: 20px
+      background-color: $muve
+      border: none
+      transition: background-color .2s linear
+      &:hover
+        background-color: $light-blue
+
+  .featureImg
+    animation: slideInRight 1s ease-in-out, fadeIn 1s ease-in-out
+
+// Creative Work  /////
+//////////////////////
+.creativeWork
+  position: relative
+  background-color: $light
+  z-index: 0
+
+  @media screen and (min-width: 768px)
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 120px
+      background-color: #fff
+    &::after
+      bottom: 0
+      z-index: -1
+
+  .works
+    position: relative
+
+    div
+      margin: 22px
+      max-width: 540px
+
+      &:nth-child(2)
+        padding-top: 12rem $im
+        p
+          margin-bottom: 60px
+      img
+        border: 20px solid $white
+        z-index: 5
+      
+      &:nth-child(3)
+        @media screen and (min-width: 1200px)
+          height: 300px
+          margin-top: -350px
+      
+      &:nth-child(5)
+        @media screen and (min-width: 1200px)
+          position: absolute
+          bottom: 125px
+          left: 5px
+
+        p
+          margin: 0
+
+        h2
+          margin: 0 $im
+          font-family: 'Lato', sans-serif
+          font-weight: 900
+          font-size: 90px
+          background-image: linear-gradient(90deg, $light-green 0%, $light-blue 80%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+        button
+          background-color: $muve
+          border: none
+          height: 50px
+          align-self: center
+
+    .projects
+      animation: fadeIn 1.5s ease-in-out
+
+// Mobile Applications //
+////////////////////////
+.mobApps
+  h5
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+  h2
+    animation: slideInUp 1s ease-in-out, fadeIn 1s ease-in-out
+
+  img
+    margin: 0 auto
+    display: flex
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+  .mobItem
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+    h5
+      color: #000
+      animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+    span
+      margin: 0 20px
+      min-width: 90px
+      height: 90px
+      font-size: 35px
+      line-height: 90px
+      background-color: $light-blue
+      color: $white
+      border-radius: 50%
+      transition: background .3s linear
+      position: relative
+      &::before
+        content: ''
+        min-width: 100px
+        height: 100px
+        line-height: 90px
+        border: 1px solid $light-blue
+        border-radius: 50px
+        position: absolute
+        left: -5px
+        bottom: -5px
+
+    &:hover
+      span
+        background-color: $muve
+
+  @media screen and (max-width: 767px)
+    .mobItem
+      width: 93%
+      margin: 0 auto
+
+// Experience //
+////////////////
+.experience
+  background: linear-gradient(90deg, $muve 30%, $light-muve 70%)
+  color: $white
+  padding: 7rem $im
+
+  .expInfo
+    animation: slideInLeft 1s ease-in-out, fadeIn 1.5s ease-in-out
+    
+  .expNum
+    animation: slideInRight 1s ease-in-out, fadeIn 1.5s ease-in-out
+
+  h3
+    margin-bottom: 15px
+    font-size: 35px
+
+  .items
+    p
+      font-size: 18px
+      margin: 0
+    i
+      margin-bottom: 25px
+      font-size: 40px
+      transition: transform .5s linear .2s
+    &:hover
+      i
+        transform: rotateY(180deg)
+
+  .divide
+    height: 3px
+    width: 50px
+    margin-bottom: 25px $im
+    background-color: $white
+
+  @media screen and (max-width: 991px)
+    padding: 7rem 0 $im
+    text-align: center
+    h3
+      font-size: 25px
+    .head
+      margin: 4rem
+    .items
+      margin-bottom: 80px
+      p
+        font-size: 14px
+      i
+        margin-bottom: 25px
+        font-size: 30px
+    .divide
+      margin: auto
+
+// Our Packages //
+//////////////////
+.packages
+  background-color: $light
+
+  header
+    h5
+      animation: slideInUp 1s ease-in-out, fadeIn 1s ease-in-out
+    h2
+      margin-bottom: 30px
+      animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+    p
+      animation: slideInUp 1.9s ease-in-out, fadeIn 1.9s ease-in-out
+
+  .planes
+    div
+      min-width: 46%
+      padding: 6% $im
+      background-color: $white
+      border-radius: 10px
+
+    h2
+      font-size: 2rem
+      font-weight: 400
+
+    h3
+      font-size: 50px
+
+    span
+      color: #383838
+      font-size: 20px
+
+    .fa-check
+      color: #30e512
+
+    .fa-times
+      color: #ff0000
+
+    .delet
+      text-decoration: line-through
+
+    button
+      color: $white
+      border: 1px solid transparent
+      transition: all .5s linear
+
+    .starter
+      transition: all .3s linear
+      h3
+        color: $light-blue
+      button
+        background-color: $light-blue
+      &:hover
+        color: $white
+        background-color: $light-blue
+        p,
+        li,
+        i,
+        span,
+        h3
+          color: $white
+        button
+          border: 1px solid $white
+          &:hover
+            background-color: $white
+            color: #000
+
+    .business
+      transition: all .5s linear
+      h3
+        color: $muve
+      button
+        background-color: $muve
+      &:hover
+        color: $white
+        background-color: $muve
+        p,
+        li,
+        i,
+        span,
+        h3
+          color: $white
+        button
+          border: 1px solid $white
+          &:hover
+            background-color: $white
+            color: #000
+
+  @media screen and (max-width: 575px)
+    .planes
+      div
+        margin: 0 6%
+
+// Watch Our Video //
+/////////////////////
+.ourVideo
+  background: url(../img/bg-video.jpg) fixed no-repeat
+  background-size: cover
+  background-position: center
+  h5,
+  h2
+    color: $white
+  h5
+    font-weight: 300
+    margin: 0
+
+  button
+    background-color: $light-blue
+    border: none
+    transition: background .25s linear
+    &:hover
+      background-color: $muve
+
+  @media screen and (max-width: 575px)
+    text-align: center
+
+// Testimonials //
+//////////////////
+.testimonials
+  h5
+    animation: slideInUp 1s ease-in-out, fadeIn 1s ease-in-out
+
+  h2
+    margin-bottom: 60px
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+
+  .owl-carousel
+    .owl-item
+      h5
+        color: #000
+        margin: 0
+      p:nth-child(3)
+        color: $light-blue
+        font-size: 14px
+    .innerItem
+      margin: 20px 10px 50px 10px
+      background-color: $light
+      border-radius: 10px
+      i
+        width: 55px
+        height: 55px
+        font-size: 20px
+        color: $white
+        line-height: 2.9
+        position: relative
+        bottom: 20px
+      p
+        padding: 0 33px $im
+      img
+        width: 100px
+        height: 100px
+        position: relative
+        top: 45px
+
+    .innerItemOne,
+    .innerItemThree
+      i
+        background-color: $muve
+    .innerItemTwo
+      i
+        background-color: $light-blue
+    .owl-dot
+      span
+        width: 13px
+        height: 13px
+        background-color: transparent
+        border: 1px solid $light-blue
+    .owl-dot.active
+      span
+        background-color: $light-blue
+    .owl-dot:hover
+      span
+        background: $light-blue
+
+// Our Clients //
+/////////////////
+.ourClients
+  padding-bottom: 7rem $im
+  .clientsCaro
+      img
+        margin: 0 auto
+        max-width: 155px
+        height: auto
+      .owl-item
+        &:hover
+          cursor: pointer
+
+// Latest Blog Post //
+//////////////////////
+.latestBlog
+  background-color: $light
+  img
+    height: 575px
+  .blog
+    padding: 5rem 3rem $im
+    h5
+      animation: fadeIn 1.5s ease-in-out
+
+    h2
+      margin-bottom: 25px
+      animation: fadeIn 1.9s ease-in-out
+    p
+      margin-bottom: 60px
+      animation: fadeIn 2.4s ease-in-out
+    button
+      background-color: $muve
+      border: none
+      transition: background .2s linear
+      animation: slideInUp 1.5s ease-in-out, fadeIn 2s ease-in-out
+      &:hover
+        background-color: $light-blue
+
+// Contact //
+/////////////
+.contact
+  .contactInfo
+    h6
+      font-weight: 900
+    a
+      font-weight: 900
+      font-size: 13px
+      color: $light-blue
+      transition: color .3s linear
+      &:hover
+        color: $light-muve
+    .ourAddress,
+    .ourEmail
+      p
+        padding-right: 15px $im
+
+  .contactForm
+    margin-top: 8.5rem
+    input,
+    textarea
+      margin: 0 15px 45px 15px
+      padding: 10px 0 $im
+      color: $gray-font
+      border: none
+      border-bottom: 1px solid $gray-font
+      &::placeholder
+        color: $gray-font
+        font-size: 13px
+    .border-black
+      border-bottom: 1px solid $light-blue
+    textarea
+      width: 90%
+      resize: none
+    button
+      margin: 0 15px
+      width: 90%
+      background-color: $light-blue
+      border: none
+      transition: background-color .2s linear
+      &:hover
+        background-color: $light-muve
+
+  @media screen and (max-width: 720px)
+    .contactInfo
+      margin-left: 15px
+      margin-right: 15px
+      div
+        margin-bottom: 20px
+      p
+        font-size: 14px
+      h6
+        font-size: .8rem
+      a
+        font-size: 11px
+
+  
+  @media screen and (min-width: 787px) and (max-width: 991px)
+    .contactForm
+      margin-top: 12.5rem
+
+  @media screen and (max-width: 784px)
+    .contactForm
+      margin-top: 3.5rem
+
+  @media screen and (max-width: 540px)
+    input
+      width: 90%
+
+  @media screen and (min-width: 540px)
+    input
+      width: 41%
+
+// Google Map //
+////////////////
+.map
+  height: 400px
+
+// Footer //
+////////////
+footer
+  padding: 3rem 0 $im
+  .socialLinks
+    animation: slideInUp 1.5s ease-in-out, fadeIn 1.5s ease-in-out
+    margin-bottom: 20px
+    i
+      width: 60px
+      height: 60px
+      color: #676767
+      font-size: 27px
+      line-height: 61px
+      transition: all .4s ease-in-out
+    a
+      margin: 0 5px
+      &:hover
+        i
+          color: $white
+          background-color: $light-blue
+
+  .copyRight
+    animation: slideInUp 2s ease-in-out, fadeIn 2s ease-in-out
+    p
+      font-size: 12px
+
+// Scroll Top Button //
+///////////////////////
+.scrollTop
+  padding: 9px 13px $im
+  color: $white
+  background: linear-gradient(90deg, $muve, $light-muve)
+  border-radius: 50%
+  position: fixed
+  right: 10px
+  bottom: 10px
+  display: none
+
+  &:hover
+    color: $white
+    background: linear-gradient(90deg, $muve, $light-blue)
+
+// Animation //
+///////////////
+@keyframes fadeIn
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes blur
+  from
+    filter: blur(20px)
+
+  to
+    filter: 0
+
+@keyframes slideInUp
+  from
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes slideInLeft
+  from
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+    visibility: visible
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes slideInRight
+  from
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+    visibility: visible
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.slideanim
+  visibility:hidden
+  visibility:visible\9 /*For old IE browsers IE6-8 */
+
+.slideanim.slide
+  visibility: visible                  
+  animation: slide 1.5s
+
+.slideanim::after
+  /* useful when its child elements are float:left */
+  content: ""
+  display: table
+  clear: both
+
+@keyframes slide
+  0%
+    opacity: 0
+    transform: translateY(50%)
+
+  100%
+    opacity: 1
+    transform: translateY(0)

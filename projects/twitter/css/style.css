@@ -1,0 +1,142 @@
+/* General 
+*************************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container {
+    max-width: 400px;
+}
+
+
+/* Do this on Twitter Section 
+*************************/
+
+section.doThisOnTwitter {
+    float: left;
+    background-color: #1da1f2;
+    color: #fff;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden
+}
+
+section.doThisOnTwitter .fab {
+    position: absolute;
+    top: -200px;
+    left: 50px;
+    z-index: 1;
+    color: #1b95e0;
+    font-size: 1100px;
+}
+
+.doThisOnTwitter .container {
+    margin: 220px auto;
+    position: relative;
+    z-index: 2
+}
+
+.doThisOnTwitter .container p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 40px auto
+}
+
+.doThisOnTwitter .container p i.fal {
+    margin: 0 10px;
+    font-size: 34px;
+    position: relative;
+    top: 10px;
+}
+
+
+/* joinTwitter Section 
+*************************/
+
+section.joinTwitter {
+    float: right;
+    width: 50%;
+}
+
+.joinTwitter .container {
+    margin: 150px auto;
+}
+
+.joinTwitter .container .fab {
+    color: #1da1f2;
+    float: left;
+}
+
+.joinTwitter .container button {
+    background-color: transparent;
+    border: 1px solid #1da1f2;
+    border-radius: 50px;
+    color: #1da1f2;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .2s all ease-in-out;
+    cursor: pointer
+}
+
+.joinTwitter .container .header button {
+    float: right;
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+.joinTwitter .container .header button:hover,
+.joinTwitter .container .sign button:hover {
+    background-color: rgba(29, 161, 242, 0.12);
+}
+
+.joinTwitter .container .header button:active,
+.joinTwitter .container .sign button:active {
+    background-color: #18488e;
+    color: #fff
+}
+
+.joinTwitter .container h1 {
+    font-size: 30px;
+    margin-top: 15px
+}
+
+.joinTwitter .container .sign {
+    margin-top: 50px
+}
+
+.joinTwitter .container .sign p {
+    font-weight: 700;
+    font-size: 18px
+}
+
+.joinTwitter .container .sign button {
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 15px
+}
+
+.joinTwitter .container .sign .signUp {
+    background-color: #1da1f2;
+    color: #fff
+}
+
+.joinTwitter .container .sign .signUp:hover {
+    background-color: #2a67a3;
+}
