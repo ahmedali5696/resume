@@ -1,0 +1,105 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Ahmed Ali | Front-end Developer
+    link(rel='stylesheet' href='css/font-awesome.min.css')
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900')
+    link(rel='icon' href='favicon.png' )
+  
+  body
+
+    // Header
+    header
+      h1 Ahmed Ali Abdulwahab
+      p Front-end Developer
+      ul
+        li Cairo, Egypt
+        li +20 115 5247 573
+        li
+          a(href='mailto:ahmedali5696@outlook.com') ahmedali5696@outlook.com
+
+    // Biography
+    section.bio
+      h2 Biography
+      .divide
+      p Hi! I'm Ahmed Ali, 22 Years Old, Front-End Developer, Student At Faculty of Arts, 1 Years In Front-End Development, I Enjoy Work That Challenges Me To Learn Something New And Stretch In A Different Direction.
+
+    // Skills
+    section.mySkills
+      h2 Skills
+      .divide
+      .skills
+        - var icons = ['html.png', 'css.png', 'js.png', 'bootstrap.png', 'jquery.png', 'pug.png', 'sass.png', 'ps.png', 'il.png', 'git.png']
+        - var spans = ['html5', 'css', 'JavaScript', 'Bootstrap','Jquery', 'Pug', 'Sass', 'PhotoShop', 'Illustrator', 'GIT']
+        each icon, i in icons
+          .skill
+            img(src='img/skills/' + icon)
+            span #{spans[i]}
+
+    // Education and Training
+    section.eduTraining
+      h2 Education & Training
+      .divide
+      .container
+        i(class="fa fa-circle pointOne")
+        .item(class='itemOne')
+          h4 Faculty of Arts 
+          span Helwan University
+          p Sep 2015 - Present
+          p I study in the Department of Geography
+
+        i(class="fa fa-circle pointTwo")
+        .item(class='itemTwo')
+          h4 Front-End Web Development  
+          span Amit Learning
+          p Jul 2018 - Sep 2018
+          p I'v training for Js, Pug and SASS
+
+    // Portfolio
+    section.portfolio
+      h2 Portfolio
+      .divide
+
+      - var imgs = ['XeOne.jpg', 'Elite.jpg', 'Payoneer.jpg', 'Pricing.jpg', 'Login-Form.jpg', 'Twitter.jpg', 'TheOne.jpg']
+      - var name = ['XeOne', 'EliteCorp', 'Payoneer', 'Pricing','Login-Form', 'Twitter', 'TheOne']
+      each img, i in imgs
+        .project
+          a(href='#')
+            img(src='img/protofolio/' + img)
+          .details
+            h4 #{name[i]}
+
+    // Certifications
+    section.certifications
+      h2 Certifications
+      .divide
+
+      .certificats
+        - var certName = ['Introduction to HTML5', 'Introduction to CSS3', 'Front End Developer Track', 'Learn to code with JavaScript']
+        - var certYear = ['2017', '2017', '2017', '2018']
+        - var certBy = ['Coursera', 'Coursera', 'Udacity', 'Openclassrooms']
+        each name, i in certName
+          .certifi
+            p Certificate Of Completion: #{name}
+            p
+              span #{certBy[i]}
+              span |
+              span #{certYear[i]}
+
+    // Footer
+    footer
+      - var socialIcons = ['facebook', 'github', 'codepen']
+      - var socialLinks = ['facebook.com/ahmedali9656', 'github.com/ahmedali5696 ', 'codepen.io/ahmedali56']
+      each icon, links in socialIcons
+        a(href='https://www.' + socialLinks[links] target='_blank')
+          i(class='fa fa-' + icon)
+
+      p Copyright © 2018 Ahmed Ali
+
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/script.js')
