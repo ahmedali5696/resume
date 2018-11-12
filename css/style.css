@@ -124,7 +124,7 @@ header ul li a {
 
 .mySkills .skill {
   display: flex;
-  flex-basis: 250px;
+  flex-basis: 247px;
   min-width: 155px;
   padding: 15px;
   margin: 20px;
@@ -398,7 +398,7 @@ header ul li a {
 .certifications .certifi {
   display: flex;
   flex-direction: column;
-  flex-basis: 350px;
+  flex-basis: 343px;
   padding: 18px;
   margin: 20px;
   text-align: left;
