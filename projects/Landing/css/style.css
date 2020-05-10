@@ -1,0 +1,457 @@
+/* General */
+* {
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+}
+
+.mt-78 {
+  margin-top: 78px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+section {
+  padding-top: 170px;
+	padding-bottom: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+section header {
+  margin-bottom: 6rem;
+}
+
+section header h5 {
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  opacity: .6;
+}
+
+/* Main colors */
+.bg-fff {
+  background-color: #fff;
+}
+
+.bg-f2f4f9 {
+  background-color: #f2f4f9;
+}
+
+/* Navigation Bar */
+.mynav {
+  background: linear-gradient(to right, #6560ed, #27c1de);
+  padding-top: 20px;
+  transition: all .5s ease-out;
+}
+
+.mynav a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.mynav .toggler {
+  color: #fff;
+  border: none;
+}
+
+.mynav ul button {
+  width: 130px;
+  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Sticky Navbar
+*********************/
+.sticky-nav {
+  padding-top: 20px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.15);
+  animation: navtransDown .2s 1 linear;
+  transition: all .2s linear;
+}
+
+.navtransUp {
+  transition: all .2s linear;
+  top: -81px !important;
+}
+
+.sticky-nav .navbar-brand {
+  color: #1d82ff !important;
+}
+
+.sticky-nav .toggler {
+  color: #6b6a6a !important;
+  border: none;
+}
+
+.sticky-nav ul li a {
+  color: #6b6a6a !important;
+}
+
+.sticky-nav ul li a.active {
+	color: #1d82ff !important;
+}
+
+.sticky-nav ul button {
+  width: 130px;
+  color: rgba(255, 255, 255, 0.9);
+  background: #00ca4c;
+  border: none;
+}
+
+
+/* Header */
+.header {
+  position: relative;
+  background: linear-gradient(to right, #6560ed, #27c1de);
+  overflow: hidden;
+}
+
+.header .bio {
+  color: #fff;
+}
+
+.header .bio h2 {
+  font-size: 70px !important;
+  font-weight: 300;
+}
+
+.header .bio p {
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header .bio button {
+  width: 175px;
+  padding: 12px;
+  background-color: #00ca4c;
+  border-radius: 33px;
+}
+
+.header .bio button a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+.header .form {
+  position: relative;
+  padding: 4%;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+  /* transition: all .2s ease-in; */
+}
+
+.header .form h3 {
+  font-size: 2.3rem;
+}
+
+.header .form input,
+.header .form select {
+  padding: 12px 12px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f2f4f9;
+  transition: all .2s ease-in;
+  color: #adb3b9;
+}
+
+.header .form input:focus,
+.header .form select:focus {
+  border: 1px solid #1d82ff;
+  transition: all .2s ease-in;
+}
+
+.header .form input::placeholder {
+  color: #adb3b9;
+}
+
+.header .form input[type="submit"] {
+  background-color: #1d82ff;
+  color: #fff;
+  border-radius: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  cursor: unset;
+  box-shadow: 0 24px 35px rgba(29, 130, 255, 0.41);
+}
+
+.header .form input[type="submit"]:hover {
+  background-color: #1a76e6;
+}
+
+
+@media only screen and (min-width: 766px) {
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 477px;
+    left: 0;
+    height: 200px;
+    width: 120%;
+    background-color: #f2f4f9;
+    transform: rotate(-5deg);
+  }
+}
+
+
+@media only screen and (min-width:200px) {
+  .header::after {
+    content: "";
+    position: absolute;
+    bottom: -159px;
+    left: 0;
+    height: 200px;
+    width: 120%;
+    background-color: #f2f4f9;
+    transform: rotate(-5deg);
+  }
+}
+
+/* App Features */
+.app-features {
+  background-color: #f2f4f9;
+}
+
+.app-features .features .feat i {
+  font-size: 60px;
+  background: linear-gradient(45deg, #6560ed, #27c1de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-features .features .feat:hover>i {
+  background: linear-gradient(-45deg, #6560ed, #27c1de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-features .features .feat h3 {
+  font-size: 25px;
+}
+
+.app-features .features .feat p {
+  line-height: 1.9;
+  font-size: 18px;
+  color: #868e96;
+}
+
+.app-features::after {
+  content: "";
+  position: absolute;
+  bottom: -125px;
+  left: 0;
+  height: 200px;
+  width: 120%;
+  background-color: #fff;
+  transform: rotate(-5deg);
+}
+
+/* Application Features */
+
+.application-features .phone-img img {
+  width: 100%;
+}
+
+.application-features .apps-feats p {
+  line-height: 1.9;
+  font-size: 18px;
+  color: #868e96;
+}
+
+.application-features .apps-feats .feat h3 {
+  font-size: 23px;
+}
+
+.application-features .apps-feats .feat p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.application-features .apps-feats .feat span {
+  font-size: 40px;
+  padding-right: 35px;
+  background: linear-gradient(45deg, #6560ed 40%, #27c1de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.application-features.bg-fff::after {
+  content: "";
+  position: absolute;
+  bottom: -125px;
+  left: 0;
+  height: 200px;
+  width: 120%;
+  background-color: #f2f4f9;
+  transform: rotate(-5deg);
+}
+
+.application-features.bg-f2f4f9::after {
+  content: "";
+  position: absolute;
+  bottom: -125px;
+  left: 0;
+  height: 200px;
+  width: 120%;
+  background-color: #fff;
+  transform: rotate(-5deg);
+}
+
+/* Reviews */
+.reviews .quote {
+  position: relative;
+}
+
+.reviews .quote div {
+  position: absolute;
+  top: 0;
+  /* bottom: 20px; */
+  color: #dee2e6;
+  font-size: 45px;
+  line-height: 0;
+  z-index: -1;
+}
+
+.reviews .quote blockquote {
+  padding: 0 50px;
+  font-family: crimson text,Georgia,times new roman,Times,serif;
+  line-height: 1.7;
+  color: #495057;
+  font-size: 26px;
+}
+
+.reviews .rating .stars {
+  color: #ffd500;
+  font-size: 23px;
+}
+
+.reviews .rating h5 {
+  color: #495057;
+}
+
+.reviews .rating span {
+  color: rgba(0,0,0,.4);
+}
+
+.reviews .clients {
+	width: 240px;
+}
+
+.reviews .clients img {
+	width: 70px;
+	border-radius: 50%;
+}
+
+.reviews .clients img:hover {
+	cursor: pointer;
+}
+
+.reviews::after {
+	content: "";
+	position: absolute;
+	bottom: -125px;
+	left: 0;
+	height: 200px;
+	width: 120%;
+	background-color: #f2f4f9;
+	transform: rotate(-5deg);
+}
+
+/* FAQ */
+.faq .accordion .card {
+  border: none;
+}
+.faq .accordion .card,
+.faq .accordion .card .card-header {
+  background-color: transparent;
+}
+
+.faq .accordion .card .card-header {
+  padding: 0;
+  border-bottom: none;
+}
+
+.faq .accordion .card-header button {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  color: #1d82ff;
+  transition: all .3s ease-out;
+}
+
+.faq .accordion .card-header i {
+  position: absolute;
+  right: 0;
+  top: 14px;
+}
+
+.faq .accordion h2 button.collapsed {
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid rgba(134, 142, 150, 0.19);
+  transition: all .3s ease-out;
+  color: #495057;
+}
+
+.faq .accordion h2 i.fa-plus {
+  display: none;
+}
+
+.faq .accordion h2 button.collapsed i.fa-plus {
+  display: inline;
+}
+
+.faq .accordion .card-header span {
+  padding-right: 15px;
+  text-align: left;
+  white-space: normal;
+  font-size: 24px;
+}
+
+.faq .accordion .card .card-body {
+  padding: 1.25rem 0;
+  line-height: 2;
+  color: #868e96;
+}
+
+
+/* Animations
+***************/
+@keyframes navtransDown {
+  from {
+    transform: translate(0, -90px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes navtransUp {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, -90px);
+  }
+}
