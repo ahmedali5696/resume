@@ -11,6 +11,7 @@ class UI {
         
     }
 
+    // Display weather details
     showData(weather) {
         this.cityName.textContent = weather.name;
         this.description.textContent = weather.weather[0].description;

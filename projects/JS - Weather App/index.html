@@ -16,49 +16,57 @@
 
 <body>
   <main>
+    <!-- Container -->
     <div class="container">
-      <div class="card text-center mx-auto mt-5">
-        <div class="card-body">
-          <h3 class="card-title city-name" id="city-name"></h1>
-          <p id="description"></p>
-          <p id="temp"></p>
-          <img id="icon" src="img/iconfinder_Cloudy_Sunny_5729392.png">
-          <ul class="list-group list-group-flush details">
-            <li class="list-group-item humidity" id="humidity"></li>
-            <li class="list-group-item feel-like" id="feel-like"></li>
-            <li class="list-group-item wind" id="wind"></li>
-          </ul>
-          <button class="btn btn-primary mt-4" data-toggle="modal" data-target="#location-modal">Change Location</button>
-          <div class="modal fade" id="location-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Location</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</spanid>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="form-group">
-                    <label for="city">City</label>
-                    <input class="form-control" type="text" id="city-input">
-                    <span id="msg"></span>
+      <div class="row">
+
+        <!-- Weather details -->
+        <div class="card text-center mx-auto mt-5">
+          <div class="card-body">
+            <h3 class="card-title city-name" id="city-name"></h3>
+            <p id="description"></p>
+            <p id="temp"></p>
+            <img id="icon" src="img/iconfinder_Cloudy_Sunny_5729392.png">
+            <ul class="list-group list-group-flush details">
+              <li class="list-group-item humidity" id="humidity"></li>
+              <li class="list-group-item feel-like" id="feel-like"></li>
+              <li class="list-group-item wind" id="wind"></li>
+            </ul>
+
+            <!-- Change location modal -->
+            <button class="btn btn-primary mt-4" data-toggle="modal" data-target="#location-modal">Change
+              Location</button>
+            <div class="modal fade" id="location-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Location</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</spanid>
+                    </button>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" id="change">Save changes</button>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="city">City</label>
+                      <input class="form-control" type="text" id="city-input">
+                      <span id="msg"></span>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="change">Save changes</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
-
   </main>
 
+  <!-- Footer -->
   <footer class="mt-5 p-3 text-center bg-light">
     Weather App &copy;
   </footer>
@@ -72,7 +80,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
     integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
   </script>
-  
+
   <script src="weather.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>

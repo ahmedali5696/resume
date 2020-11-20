@@ -1,29 +1,54 @@
 /*jshint esversion: 6 */
+
+// Init instances
 const weather = new Weather();
 const ui = new UI();
+
+// Change location UI
 const btn = document.getElementById('change');
-const modal = document.getElementById('location-modal');
+const locationInput = document.getElementById('city-input');
 
-document.addEventListener('DOMContentLoaded', () => {
+// load Event listener
+loadAllListeners();
+
+// load Event listener
+function loadAllListeners() {
+  // Display current user location and weather
+  document.addEventListener('DOMContentLoaded', getWeather);
+
+  // Change location button
+  btn.addEventListener('click', changeLocation);
+}
+
+// Get user location and weather
+function getWeather() {
+  // Get current location
   weather.getLocation().then(data => {
-    weather.changeLocation(data);
-    weather.getWeather()
-    .then(data => {
-      ui.showData(data.weather);
-    });
-  });
-});
+    // Save location in weather class
+    weather.changeLocation(data.location.region);
 
-btn.addEventListener('click', (e) => {
-  if (document.getElementById('city-input').value !== '') {
-    const locationInput = document.getElementById('city-input').value;
-    weather.changeLocation(locationInput);
-    $('#location-modal').modal('hide');
+    // Get weather details
     weather.getWeather().then(data => {
+      // Display weather details
       ui.showData(data.weather);
-    })
-    .catch(err => console.log(err));
-  } else {
+    }).catch(err => console.log(err));
+  });
+}
+
+// Change user location
+function changeLocation() {
+  // Validation
+  if (locationInput.value === '') {
     document.getElementById('msg').textContent = 'Please put your location';
+  } else {
+    // Save location in weather class
+    weather.changeLocation(locationInput.value);
+    // Get weather details
+    weather.getWeather().then(data => {
+        // Display weather details
+        ui.showData(data.weather);
+      })
+      .catch(err => console.log(err));
+    $('#location-modal').modal('hide');
   }
-});
+}
