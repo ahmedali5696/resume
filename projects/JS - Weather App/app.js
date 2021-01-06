@@ -25,7 +25,7 @@ function getWeather() {
   // Get current location
   weather.getLocation().then(data => {
     // Save location in weather class
-    weather.changeLocation(data.location.region);
+    weather.changeLocation(data.location.city);
 
     // Get weather details
     weather.getWeather().then(data => {
