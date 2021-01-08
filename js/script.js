@@ -49,7 +49,7 @@ btn.addEventListener('click', () => {
 
     if (list.classList.contains('collapsed')) {
         list.classList.remove('collapsed');
-    } else if (!list.classList.contains('collapsed')) {
+    } else  {
         list.classList.add('collapsed');
     }
 })
