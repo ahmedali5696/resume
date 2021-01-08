@@ -16,7 +16,7 @@ document.addEventListener('scroll', () => {
 document.addEventListener('scroll', () => {
 
     // loop on all nav links to get his atrr
-    document.querySelectorAll('#nav li a').forEach( link => {
+    document.querySelectorAll('#nav li a').forEach(link => {
 
         // store current element to use it to compare sections ids
         const currLink = link,
@@ -28,8 +28,8 @@ document.addEventListener('scroll', () => {
             const sectionOffset = section.offsetTop,
                 // Store all li at nav to loop on it
                 items = document.querySelectorAll('.item');
-            
-                // condition to add active class to right link
+
+            // condition to add active class to right link
             if (window.scrollY > sectionOffset - 2 && hrefElement.includes(section.id)) {
                 // loop on li to remove any active class before add the new
                 items.forEach(item => {
@@ -51,12 +51,5 @@ btn.addEventListener('click', () => {
         list.classList.remove('collapsed');
     } else if (!list.classList.contains('collapsed')) {
         list.classList.add('collapsed');
-
-        list.addEventListener('click', e => {
-            if (e.target.parentElement.classList.contains('item')) {
-                list.classList.remove('collapsed');
-            }
-        })
-
     }
 })

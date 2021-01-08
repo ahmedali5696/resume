@@ -18,7 +18,7 @@ a {
 }
 
 h2 {
-  margin-bottom: 6px;
+  margin: 6px;
   color: #777;
   font-size: 30px;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ section {
   top: 0;
 }
 
-.fixed + .bio {
+.fixed+.bio {
   margin-top: 59px;
 }
 
@@ -70,6 +70,10 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+nav h2 {
+  display: none;
 }
 
 nav ul li {
@@ -87,28 +91,32 @@ nav ul li:hover a {
 }
 
 nav .nav-toggler {
-  display:none;
-  position:absolute;
-  top: 18px;
-  right: 18px;
-  cursor: pointer;
+  display: none;
 }
 
 
 
-@media screen and (max-width: 543px){
+@media screen and (max-width: 543px) {
+  nav ul {
+    flex-direction: column;
+  }
+
   nav .nav-toggler {
-    display:inline-block;
+    display: inline-block;
+    position: absolute;
+    top:2.8vw;
+    right: 18px;
+    cursor: pointer;
+  }
+  
+  nav h2 {
+    display: block;
+    text-align: center;
+    line-height: 1.9;
   }
 
   nav ul.collapsed {
     display: none;
-    height: 0;
-    /* transform: translateY(-280px); */
-  }
-
-  nav ul {
-    flex-direction: column;
   }
 }
 
@@ -459,8 +467,8 @@ nav .nav-toggler {
 }
 
 .portfolio .project .details h4 {
- color: #46c757;
- margin: 10px 0;
+  color: #46c757;
+  margin: 10px 0;
 }
 
 .portfolio .project:hover .details {
