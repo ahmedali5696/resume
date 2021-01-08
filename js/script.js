@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-document.getElementById('main').setAttribute('href', window.location.origin);
+document.getElementById('main').setAttribute('href', window.location.origin + '/resume');
 
 const offset = document.getElementById('nav').offsetTop,
     btn = document.getElementById('collapse');
