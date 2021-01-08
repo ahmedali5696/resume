@@ -30,6 +30,14 @@ h2 {
   }
 }
 
+section {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
 .divide {
   height: 2px;
   margin: 0 auto;
@@ -39,19 +47,21 @@ h2 {
 
 
 #nav {
-  position: absolute;
-  top: 0;
-  box-shadow: 0 1px 18px -8px;
+  box-shadow: 0 11px 18px -15px;
   width: 100%;
+  min-height: 59px;
   background-color: #fff;
-  transition: all .3s ease-in-out;
   z-index: 10;
+  overflow: hidden;
 }
 
 .fixed {
   position: fixed;
-  top: -63px;
-  transition: all .3s ease-in-out;
+  top: 0;
+}
+
+.fixed + .bio {
+  margin-top: 59px;
 }
 
 nav ul {
@@ -59,6 +69,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -66,17 +77,47 @@ nav ul li {
   font-weight: bold;
 }
 
+nav ul li.active a {
+  color: #46c757;
+}
+
 nav ul li:hover a {
-  color: #4480ed;
+  color: #46c757;
   transition: all .2s ease-in-out;
 }
 
-header {
-  padding: 7rem 0;
+nav .nav-toggler {
+  display:none;
+  position:absolute;
+  top: 18px;
+  right: 18px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 543px){
+  nav .nav-toggler {
+    display:inline-block;
+  }
+
+  nav ul.collapsed {
+    display: none;
+    height: 0;
+    /* transform: translateY(-280px); */
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+.header {
+  padding: 4rem 0;
   text-align: center;
 }
 
-header h1 {
+.header h1 {
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -85,49 +126,64 @@ header h1 {
 }
 
 @media screen and (max-width: 480px) {
-  header h1 {
+  .header h1 {
     font-size: 37px;
   }
 }
 
-header p,
-header h1 {
+.header p,
+.header h1 {
   text-transform: uppercase;
 }
 
-header p {
+.header p {
   margin-top: 5px;
   margin-bottom: 30px;
   font-size: 25px;
 }
 
 @media screen and (max-width: 480px) {
-  header p {
+  .header p {
     font-size: 18px;
   }
 }
 
-header ul {
+.header ul {
   padding: 0;
   list-style: none;
 }
 
-header ul li {
+.header ul li {
   margin: 15px;
   font-size: 20px;
 }
 
-header ul li a {
-  color: #4480ed;
+.header ul li a {
+  color: #46c757;
 }
 
 @media screen and (max-width: 480px) {
-  header ul li {
+  .header ul li {
     font-size: 15px;
+  }
+
+  .header img {
+    width: 208px;
+    height: 127px;
   }
 }
 
+.social {
+  text-align: center;
+}
+
+.social a {
+  margin: 10px;
+  font-size: 18px;
+}
+
 .bio {
+  padding-top: 5rem;
   text-align: center;
 }
 
@@ -168,7 +224,7 @@ header ul li a {
   padding: 15px;
   margin: 20px;
   text-align: left;
-  box-shadow: 0 1px 30px -8px;
+  box-shadow: 0 1px 23px -8px;
   transition: all .2s ease-in-out;
 }
 
@@ -179,9 +235,9 @@ header ul li a {
 }
 
 .mySkills .skill:hover {
-  background-color: #4480ed;
+  background-color: #46c757;
   color: #fff;
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .mySkills .skill img {
@@ -313,7 +369,7 @@ header ul li a {
 
 .eduTraining .container .item span {
   font-size: 14px;
-  color: #4480ed;
+  color: #46c757;
 }
 
 .eduTraining .container .item p {
@@ -398,12 +454,17 @@ header ul li a {
   background-color: #f1f1f1;
   padding: 6px 0;
   position: absolute;
-  top: 219px;
+  top: 207px;
   transition: all .2s ease-in-out;
 }
 
+.portfolio .project .details h4 {
+ color: #46c757;
+ margin: 10px 0;
+}
+
 .portfolio .project:hover .details {
-  top: 144px;
+  top: 156px;
 }
 
 @media screen and (max-width: 797px) {
@@ -465,16 +526,11 @@ header ul li a {
 }
 
 .certificats .certifi span:first-of-type {
-  color: #4480ed;
+  color: #46c757;
 }
 
-footer {
-  padding-top: 7rem;
+footer.social {
+  padding-top: 5rem;
   padding-bottom: 1rem;
   text-align: center;
-}
-
-footer a {
-  margin: 10px;
-  font-size: 18px;
 }
