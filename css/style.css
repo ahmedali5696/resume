@@ -533,7 +533,8 @@ nav .nav-toggler {
   margin-right: 20px;
 }
 
-.certificats .certifi span:first-of-type {
+.certificats .certifi span:first-of-type
+ {
   color: #46c757;
 }
 
