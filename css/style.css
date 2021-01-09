@@ -501,6 +501,7 @@ nav .nav-toggler {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column-reverse;
 }
 
 .certificats .certifi {
