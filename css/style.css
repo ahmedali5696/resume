@@ -258,12 +258,6 @@ nav .nav-toggler {
   line-height: 30px;
 }
 
-.mySkills .skills .skill:nth-child(1) span,
-.mySkills .skills .skill:nth-child(2) span,
-.mySkills .skills .skill:nth-child(7) span {
-  text-transform: uppercase;
-}
-
 .eduTraining {
   height: 500px;
   text-align: center;
