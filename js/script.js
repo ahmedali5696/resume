@@ -47,10 +47,4 @@ document.addEventListener('scroll', () => {
 btn.addEventListener('click', () => {
     const list = document.getElementById('list');
     list.classList.toggle('collapsed');
-
-    // if (list.classList.contains('collapsed')) {
-    //     list.classList.remove('collapsed');
-    // } else {
-    //     list.classList.add('collapsed');
-    // }
 })
