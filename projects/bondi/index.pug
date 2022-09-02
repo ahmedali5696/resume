@@ -1,0 +1,205 @@
+//- Components
+mixin btn(title)
+  a(class='rounded-pill lh-1 main-btn' href='#')= title
+
+mixin sectionHeader(heading, disc)
+  header(class='section-header pb-1 mb-5 text-center')
+    img(class='mb-3' src='img/title.png' alt='')
+    h2= heading
+    p(class='text-black-50 text-uppercase')= disc
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Bondi
+    link(rel='stylesheet' href='css/bootstrap.min.css')
+    link(rel='stylesheet' href='css/font-awesome.min.css')
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400,900')
+
+  body
+
+    // Navigation Bar
+    nav(class='navbar navbar-expand-md sticky-top')
+      div(class='container')
+        a(class='navbar-brand' href='#') 
+          img(class='' src='img/logo.png' alt='')
+        button(class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          i(class='fa fa-bars' aria-hidden='true')
+        div(class='collapse navbar-collapse' id='navbarSupportedContent')
+          ul(class='navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize')
+            - var list = ['home', 'services', 'portfolio', 'about', 'contact']
+            each item in list
+              if item === 'home'
+                li(class='nav-item active')
+                  a(class='nav-link' href='#'+item) #{item}
+              else
+                li(class='nav-item')
+                  a(class='nav-link' href='#'+item) #{item}
+          div(class='search mx-2 ps-3 d-none d-md-block')
+            i(class='fa fa-search' aria-hidden='true')
+          +btn('Login')
+
+    // Header
+    header#home(class='header d-flex justify-content-center align-items-center')
+      .container
+        div(class='text-center text-light')
+          h1.fw-bold Teste the Creativity 
+          p(class='text-white-50 mb-5') We make awesome graphic and web design 
+          +btn('Get Start')
+    
+    // Features
+    section#services(class='features py-5 text-center')
+      .container
+        +sectionHeader('We are good at', 'Some of these stuff under')
+        .row
+          - var icons = ['fa-pencil', 'fa-television', 'fa-plug']
+          each ico in icons 
+            div(class='feat col-lg-4 col-md-6 col-12')
+              .icons-holder(class='position-relative mb-2 pt-5')
+                i(class='position-absolute fa fa-etsy' aria-hidden='true')
+                i(class='fa fa-4x '+ico aria-hidden='true')
+              h3 Graphic Design
+              p(class='text-black-50') Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+
+    // Our Works
+    section#portfolio(class='our-works py-5 text-center')
+      .container
+        +sectionHeader('We Make This', 'Prepare to be amazing')
+        ul(class='justify-content-center list-unstyled d-flex work-category')
+          - var category = ['all', 'design', 'code', 'photograghy', 'apps']
+          each cate in category
+            if cate === 'all'
+              li(data-class='.'+cate class='active text-capitalize px-3 mx-1 text-black-50 rounded-1') #{cate}
+            else
+              li(data-class='.'+cate class='text-capitalize px-3 mx-1 text-black-50 rounded-1') #{cate}
+        .row
+          - var dataClass = ['design', 'code', 'photograghy', 'apps', 'photograghy', 'apps', 'design', 'code']
+          each data, i in dataClass
+            div(class='col-sm-6 col-md-4 col-lg-3') 
+              div(class='box '+data+' overflow-hidden mb-4 position-relative')
+                img(class='img-fluid' src='img/work-0'+(i+1)+'.jpg' alt='')
+                div(class='about-work position-absolute d-flex flex-column justify-content-center text-light')
+                  h5 Application
+                  p.font-monospace For help you to do some thing
+        +btn('I want more')
+
+    // About us
+    section#about(class='about pt-5')
+      .container
+        +sectionHeader('Some Stuff About Us', 'THE GREAT TEAM')
+        p(class='description text-black-50 text-center mx-auto mb-5') Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.
+        .row(class='align-items-center')
+          div(class='col-12 col-md-5 mb-3')
+            div(class='design text-center text-md-start')
+              h3 Retina Design
+              p Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. 
+              p Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.
+              +btn('Order me one')
+          div(class='col-12 col-md-7')
+            div(class='our-logo')
+              img(class='img-fluid' src='img/laptop.png')
+
+    // Our Team
+    section(class='our-team py-5 text-center')
+      .container
+        header(class='py-2 mb-5')
+          h2 Meet the Team
+          p(class='text-black-50 mx-auto') Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.
+        div(class='row justify-content-center')
+          - for (var i = 1; i <= 4; i++)
+            div(class='col-10 col-md-6 col-lg-3')
+              div(class='person bg-white')
+                img(class='img-fluid' src='img/team-'+i+'.png' alt='')
+                h3.p-2 Luke Skywalker
+                p.p-3 “I don't understand how we got by those troops. I thought we were dead.“
+    
+    // Partners
+    section#partners(class='partners py-5')
+      .container
+        div(class='row justify-content-center')
+          - for (var i = 1; i <= 4; i++)
+            div(class='col-2')
+              img(class='img-fluid' src='img/tech-'+i+'.png' alt='')
+
+    // Start project
+    section(class='start-projet py-5 text-center')
+      .container
+        header(class='py-5')
+          h2.text-white Start Your Project Now
+          p(class='text-white-50 mb-5') Leave your description and we start the engine.Don't worry,you can cancel anytime
+          +btn('Start Ptoject')
+
+    // Our Blogs
+    section(class='blogs py-5')
+      +sectionHeader('Read Our Blog', 'NEW STORIES')
+      .container
+        div(class='row justify-content-center')
+          - for (var x = 1; x <= 3; x++ )
+            div(class='col-10 col-md-4')
+              div(class='card mb-4')
+                img(src='img/blog-'+x+'.jpg' class='card-img-top' alt='')
+                div(class='card-body')
+                  p(class='card-text')
+                    small(class='text-muted') January 17,2017
+                  h5(class='card-title') Some Awesome Blog Title Here
+        div(class='mt-4 text-center')
+          +btn('More Stories')
+          
+    // Subscription
+    section#subscription(class='subscription py-3 text-center text-md-start')
+      .container
+        form(class='row justify-content-center align-items-center')
+          div(class='col-12 col-lg-3 mb-2')
+            p(class='fw-bold fs-5 m-0') Subscribe to our Newsletter:
+          div(class='col-12 col-md-6 col-lg-7 mb-2')
+              input(class='sub-input w-100 border-0' type='text' name='sub-input' placeholder='Enter email Address')
+          div(class='col-12 col-md-6 col-lg-2 mb-2')
+            input(class='btn rounded-pill w-100 bg-black' type='submit' value='Subscripe')
+
+    // Footer
+    footer#footer(class='footer py-5 text-white-50')
+      .container
+        div(class='row justify-content-center')
+          div(class='col-12 col-md-6 col-lg-4 mb-3')
+            img(class='mb-4' src='img/logo.png' alt='')
+            p(class='mb-5') Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+            p Created by 
+              a(href='#' class='text-primary') Graphberry
+              | ,Belgrade,Serbia
+            p © 2017 - 
+              span.copy-right Bondi.Inc
+          div(class='col-10 col-md-4 col-lg-2 mb-3')
+            h5.text-white Links
+            ul(class='links list-unstyled')
+              each link in ['Home', 'Our Services', 'Portfolio', 'Testimonials', 'Support', 'Terms and Conditions']
+                li.mb-2
+                  a(class='text-white-50' href='#') #{link}
+          div(class='col-10 col-md-4 col-lg-2 mb-3')
+            h5.text-white About Us
+            ul(class='about-us list-unstyled')
+              each about in ['Sign In', 'Register', 'About Us', 'Blog', 'Contact Us']
+                li.mb-2
+                  a(class='text-white-50' href='#') #{about}
+          div#contact(class='col-10 col-md-6 col-lg-4 mb-3')
+            h5.text-white Contact Us
+            p Get in touch with us via mail phone.We are waiting for your call or message
+            a(href='#' class='btn w-100 rounded-pill bg-danger text-white') graphberry@gmail.com
+            ul(class='social list-unstyled d-flex mt-4')
+              li(class='m-2 text-primary fs-2')
+                i(class='fa fa-facebook-official' aria-hidden='true')
+              li(class='m-2 text-primary fs-2')
+                i(class='fa fa-twitter-square' aria-hidden='true')
+              li(class='m-2 text-danger fs-2')
+                i(class='fa fa-google-plus-official' aria-hidden='true')
+              li(class='m-2 text-warning fs-2')
+                i(class='fa fa-codiepie' aria-hidden='true')
+
+
+    script(src='js/jquery-3.6.0.min.js')
+    script(src='js/bootstrap.bundle.min.js')
+    script(src='js/script.js')

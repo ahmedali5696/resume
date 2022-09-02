@@ -1,0 +1,145 @@
+// Vars //
+/////////////////
+$lato-font: 'Lato', sans-serif
+$dark-blue: #19283f
+$light-blue: #33d1cc
+$red: #ff3150
+$yellow: #ffc400
+$section: #eff7fa
+$im: !important
+
+/* General */
+html
+  scroll-behavior: smooth
+
+body
+  font-family: $lato-font
+
+input:focus,
+textarea:focus,
+button:focus
+  outline: none
+
+a
+  text-decoration: none $im
+
+/* Components */
+.main-btn
+  background-color: $red
+  color: $yellow
+  padding: .5rem 1.2rem
+
+.section-header
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    width: 80px
+    height: 1px
+    background-color: $light-blue
+    bottom: 0
+
+/* Navbar */
+.navbar
+  background-color: $dark-blue
+  .navbar-toggler
+    color: #fff
+    border-color: #fff
+    &:focus
+      box-shadow: none
+  .navbar-nav
+    .nav-link
+      color: #fff
+      font-weight: 700
+      &:hover,
+      &:focus
+        color: $light-blue
+    .nav-item.active
+      a
+        color: $light-blue
+  .search
+    border-left: 1px solid $light-blue
+    i
+      color: $light-blue
+
+/* Header */
+.header
+  min-height: calc( 100vh - 70px )
+  background-color: $dark-blue
+
+/* Feature Section*/
+.features
+  .feat
+    .icons-holder
+      i:first-child
+        opacity: .20
+        font-size: 123px
+        bottom: 0
+      i
+        color: $light-blue
+    h3
+      color: $yellow
+
+/* Our Works */
+.our-works
+  background-color: $section
+  .work-category
+    li 
+      cursor: pointer
+      &.active
+        background-color: $red
+        color: #ffF $im
+      &:not(.active):hover
+        color: $red $im
+  .box
+    .about-work
+      top: 0
+      background-color: rgba(51, 209, 204,0.6)
+      width: 100%
+      height: 100%
+      transform: translateX(-100%)
+      transition: 0.3s
+    &:hover
+      cursor: pointer
+      .about-work
+        transform: translateX(0)
+
+/* About Us */
+.about
+  .description
+    max-width: 600px
+
+/* Our Team */
+.our-team
+  background-color: $section
+  header
+    h2
+      color: $yellow
+    p
+      max-width: 1000px
+  .person
+    h3
+      background-color: $light-blue
+      color: #fff
+
+/* Start project */
+.start-projet
+  background-color: $dark-blue
+  
+/* Subscription */
+.subscription
+  background-color: $yellow
+  .sub-input
+    background-color: transparent;
+    border-bottom: 1px solid #fff $im
+    &::placeholder
+      color: #fff
+  .btn
+    color: $yellow
+
+/* Footer */
+.footer
+  background-color: $dark-blue
+  .copy-right
+    color: $yellow
+
