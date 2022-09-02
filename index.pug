@@ -1,105 +1,155 @@
+//- Data to use here
+include vars.pug
+
+
+
+//- Mixins
+mixin social
+  ul(class='social__links d-flex')
+    each link, icon in {'facebook-square' : 'https://www.facebook.com/ahmedali9656', 'github-square' : 'https://www.github.com/ahmedali5696', 'codepen' : 'https://www.codepen.io/ahmedali56', 'linkedin-square' : 'https://www.linkedin.com/in/ahmedali56'}
+      li
+        a(href=link target='_blank')
+          i(class="fa fa-"+icon aria-hidden="true")
+
+
+
 doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='theme-color' content='#46c757')
     title Ahmed Ali | Front-end Developer
     link(rel='stylesheet' href='css/font-awesome.min.css')
     link(rel='stylesheet' href='css/style.css')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900')
     link(rel='icon' href='favicon.png' )
-  
+
   body
 
-    // Header
-    header
-      h1 Ahmed Ali Abdulwahab
-      p Front-end Developer
-      ul
-        li Cairo, Egypt
-        li +20 115 5247 573
-        li
-          a(href='mailto:ahmedali5696@outlook.com') ahmedali5696@outlook.com
+    //- Header
+    header(id='contacts' class='header py-3 text-center')
 
-    // Biography
-    section.bio
-      h2 Biography
-      .divide
-      p Hi! I'm Ahmed Ali, 22 Years Old, Front-End Developer, Student At Faculty of Arts, 1 Years In Front-End Development, I Enjoy Work That Challenges Me To Learn Something New And Stretch In A Different Direction.
-
-    // Skills
-    section.mySkills
-      h2 Skills
-      .divide
-      .skills
-        - var icons = ['html.png', 'css.png', 'js.png', 'bootstrap.png', 'jquery.png', 'pug.png', 'sass.png', 'ps.png', 'il.png', 'git.png']
-        - var spans = ['html5', 'css', 'JavaScript', 'Bootstrap','Jquery', 'Pug', 'Sass', 'PhotoShop', 'Illustrator', 'GIT']
-        each icon, i in icons
-          .skill
-            img(src='img/skills/' + icon)
-            span #{spans[i]}
-
-    // Education and Training
-    section.eduTraining
-      h2 Education & Training
-      .divide
       .container
-        i(class="fa fa-circle pointOne")
-        .item(class='itemOne')
-          h4 Faculty of Arts 
-          span Helwan University
-          p Sep 2015 - Present
-          p I study in the Department of Geography
+        a(class='header__brand' href='#')
+          img(src='img/logo.png' alt='Ahmed Ali | Front-end Developer')
 
-        i(class="fa fa-circle pointTwo")
-        .item(class='itemTwo')
-          h4 Front-End Web Development  
-          span Amit Learning
-          p Jul 2018 - Sep 2018
-          p I'v training for Js, Pug and SASS
+        .header__contacts
+          p Cairo, Egypt
+          p +20 115 5247 573
+          a(class='text-green' href='mailto:ahmedali5696@outlook.com') ahmedali5696@outlook.com
 
-    // Portfolio
-    section.portfolio
+        +social
+
+
+
+
+    nav(id='nav' class='navbar')
+      .container
+
+        button(id='navbar__toggler' class='navbar__toggler')
+          i(class="fa fa-bars fa-2x" aria-hidden="true")
+
+        ul(class='navbar__nav d-flex text-center collapsed')
+          each item in ['contacts', 'skills', 'education', 'portfolio', 'certifications']
+            if (item === 'contacts')
+              li.nav-item(class='active')
+                a(class="text-gray " href='#'+item)= item
+            else
+              li.nav-item
+                a(class="text-gray " href='#'+item)= item
+
+
+
+
+    section(class='bio text-center py-3')
+      .container
+        h2 Biography
+        p.mx-auto Front-end Developer, 1 Years in Front-end development,i builded some small apps like (Calories Calculater - Weather and detecte location - Game Gussing number and more...). see my apps source code in github and portfolio.
+
+
+
+
+    section(id='skills' class='skills py-3 text-center')
+
+      .container
+        h2 Skills
+
+        .skills__container(class='d-grid')
+
+          each skill in skills
+            .skills__item(class='d-flex')
+              img(src='img/skills/'+skill+'.png')
+              p= skill
+
+
+
+    section(id='education' class='edu-experince py-3')
+      h2.text-center Education & training
+
+      .container
+        .edu-experince__timeline
+
+          .timeline__container(class='left')
+            .item
+              h4 Faculty of Arts
+              p Helwan University
+              p Sep 2015 - Jul 2021
+              p I study in the Department of Geography
+
+          .timeline__container(class='right')
+            .item
+              h4 Front-End Web Development
+              p Amit Learning
+              p Jul 2018 - Sep 2018
+              p I'v training for Js, Pug and SASS
+
+
+
+
+    section(id='portfolio' class='portfolio py-3 text-center')
       h2 Portfolio
-      .divide
 
-      - var imgs = ['XeOne.jpg', 'Elite.jpg', 'Payoneer.jpg', 'Pricing.jpg', 'Login-Form.jpg', 'Twitter.jpg', 'TheOne.jpg']
-      - var name = ['XeOne', 'EliteCorp', 'Payoneer', 'Pricing','Login-Form', 'Twitter', 'TheOne']
-      each img, i in imgs
-        .project
-          a(href='#')
-            img(src='img/protofolio/' + img)
-          .details
-            h4 #{name[i]}
+      .container
 
-    // Certifications
-    section.certifications
-      h2 Certifications
-      .divide
+        .portfolio__container(class='d-grid')
 
-      .certificats
-        - var certName = ['Introduction to HTML5', 'Introduction to CSS3', 'Front End Developer Track', 'Learn to code with JavaScript']
-        - var certYear = ['2017', '2017', '2017', '2018']
-        - var certBy = ['Coursera', 'Coursera', 'Udacity', 'Openclassrooms']
-        each name, i in certName
-          .certifi
-            p Certificate Of Completion: #{name}
-            p
-              span #{certBy[i]}
-              span |
-              span #{certYear[i]}
+          each img, item in portContent
+            .portfolio__item
+              a(href='#' target='_blank')
+                img(class='portfolio__img' src='img/protofolio/' + img)
+              h4= item
 
-    // Footer
-    footer
-      - var socialIcons = ['facebook', 'github', 'codepen']
-      - var socialLinks = ['facebook.com/ahmedali9656', 'github.com/ahmedali5696 ', 'codepen.io/ahmedali56']
-      each icon, links in socialIcons
-        a(href='https://www.' + socialLinks[links] target='_blank')
-          i(class='fa fa-' + icon)
 
+
+    section(id='certifications' class='certifications py-3')
+      h2.text-center Certifications
+
+      .container
+
+        .certifications__container(class='d-flex')
+
+          each content in certfiContent
+            .certifications__item
+              p= content.name 
+              p= content.by 
+              p
+                a(class='text-green' href='#')= content.link 
+                span.text-green | 
+                span= content.date 
+
+
+
+    footer.text-center
+      +social
       p Copyright © 2018 Ahmed Ali
 
-    script(src='js/jquery-3.3.1.min.js')
+
+
+
     script(src='js/script.js')
+
+
+    //- 
