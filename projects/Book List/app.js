@@ -34,9 +34,6 @@ class UI {
     p.className = `alert ${className}`;
     p.textContent = msg;
 
-    // Get Uis to specify element place
-    const form = document.querySelector('#book-form');
-    const container = document.querySelector('.container');
 
     // Remove massege
     setTimeout(() => {
