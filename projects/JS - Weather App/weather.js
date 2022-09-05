@@ -18,7 +18,7 @@ class Weather {
 
   // Get current location from api
   async getLocation() {
-    const locationResp = await fetch('https://extreme-ip-lookup.com/json/');
+    const locationResp = await fetch('https://extreme-ip-lookup.com/json/?key=Yw6V3K7FoTxqx9uE9gf3');
     const location = await locationResp.json();
 
     return {
