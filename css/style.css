@@ -1,3 +1,11 @@
+:root {
+  --main-color: #46c757;
+  --text-color: #777;
+  --headings-color: #444;
+  --white: #fff;
+  --items-bg-color: #fff;
+}
+
 /** GENERIC **/
 html {
   scroll-behavior: smooth;
@@ -5,7 +13,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #777;
+  color: var(--text-color);
+  background-color: var(--white);
 }
 
 h2 {
@@ -13,7 +22,7 @@ h2 {
   padding-bottom: 10px;
   margin: auto;
   max-width: 370px;
-  color: #444;
+  color: var(--headings-color);
   font-size: clamp(25px, 2.5vw, 1.9em);
   text-transform: uppercase;
 }
@@ -60,11 +69,11 @@ ul {
 }
 
 .text-green {
-  color: #46c757;
+  color: var(--main-color);
 }
 
 .text-gray {
-  color: #777;
+  color: var(--text-color);
 }
 
 .d-flex {
@@ -82,7 +91,7 @@ ul {
 }
 
 .social__links i {
-  color: #777;
+  color: var(--text-color);
   transition: .2s;
 }
 
@@ -104,6 +113,7 @@ ul {
 
 /* Header */
 .header {
+  position: relative;
   font-size: clamp(1em, 1.7vw, 1.2em);
 }
 
@@ -117,8 +127,8 @@ ul {
   position: sticky;
   top: 0;
   z-index: 2;
-  box-shadow: 0 11px 18px -15px;
-  background-color: #fff;
+  box-shadow: 0 11px 18px -15px rgba(0, 0, 0, 0.8);
+  background-color: var(--white);
 }
 
 .navbar__nav {
@@ -141,11 +151,22 @@ ul {
 }
 
 .nav-item a:hover {
-  color: #46c757;
+  color: var(--main-color);
 }
 
 .nav-item.active a {
-  color: #46c757;
+  color: var(--main-color);
+}
+
+.dark-mode {
+  position: absolute;
+  left: 12px;
+  top: 35%;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* Biography */
@@ -166,12 +187,13 @@ ul {
   align-items: center;
   padding-right: 10px;
   padding-left: 10px;
-  box-shadow: 0 1px 23px -8px;
+  box-shadow: 0 1px 18px -10px #000;
+  background-color: var(--items-bg-color);
   transition: .2s;
 }
 
 .skills__item:hover {
-  background-color: #46c757;
+  background-color: var(--main-color);
   color: #fff;
   transform: scale(1.04);
 }
@@ -191,7 +213,7 @@ ul {
   content: '';
   position: absolute;
   width: 3px;
-  background-color: #77777777;
+  background-color: var(--text-color);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -212,7 +234,7 @@ ul {
   right: 30px;
   border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent var(--white);
 }
 
 .edu-experince__timeline .right {
@@ -229,7 +251,7 @@ ul {
   left: 30px;
   border: medium solid white;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent var(--white) transparent transparent;
 }
 
 .edu-experince__timeline .right::after {
@@ -248,7 +270,7 @@ ul {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: #444;
+  background-color: var(--headings-color);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -256,8 +278,9 @@ ul {
 
 .timeline__container .item {
   padding: 15px;
-  box-shadow: 0 1px 30px -8px;
   position: relative;
+  box-shadow: 0 1px 18px -10px #000;
+  background-color: var(--items-bg-color);
   border-radius: 6px;
 }
 
@@ -266,7 +289,7 @@ ul {
 }
 
 .timeline__container .item p:nth-of-type(1) {
-  color: #46c757;
+  color: var(--main-color);
 }
 
 .timeline__container .item p:nth-of-type(2), .timeline__container .item p:nth-of-type(3) {
@@ -304,7 +327,7 @@ ul {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #46c757;
+  background-color: var(--main-color);
   color: #fff;
   transform: rotate(-32deg) translateY(116px);
   transition: .2s;
@@ -328,7 +351,8 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5em;
-  box-shadow: 0 1px 18px -8px;
+  box-shadow: 0 1px 18px -10px #000;
+  background-color: var(--items-bg-color);
   padding: 0 15px;
 }
 
@@ -372,7 +396,7 @@ ul {
   .edu-experince__timeline .left::before,
   .edu-experince__timeline .right::before {
     border-width: 10px 10px 10px 0px;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--white) transparent transparent;
   }
   .edu-experince__timeline .right::before {
     left: 60px;
@@ -389,7 +413,7 @@ ul {
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--white) transparent transparent;
   }
   /* Portfolio */
   .portfolio__container {
