@@ -2,7 +2,6 @@
 const toggleBtn = document.getElementById('navbar__toggler');
 const navbarList = document.querySelector('.navbar__nav');
 const navItem = document.querySelectorAll('.nav-item');
-const darkModeBtn = document.querySelector('#dark-mode');
 
 
 // Navbar Toggler
@@ -23,32 +22,6 @@ navbarList.addEventListener('click', (e) => {
 })
 
 
-darkModeBtn.addEventListener('click', () => {
-  bodyStyle = document.body.style;
-  changeToggler = darkModeBtn.querySelectorAll('i')[1];
-
-  darkModeBtn.classList.toggle('dark');
-
-  if (darkModeBtn.classList.contains('dark')) {
-
-    changeToggler.classList.replace('fa-toggle-off', 'fa-toggle-on');
-
-    bodyStyle.setProperty('--white', '#1c1c1c');
-    bodyStyle.setProperty('--text-color', '#c7c7c7');
-    bodyStyle.setProperty('--headings-color', '#fff');
-    bodyStyle.setProperty('--items-bg-color', '#141414');
-
-  } else if (!darkModeBtn.classList.contains('dark')) {
-
-    changeToggler.classList.replace('fa-toggle-on', 'fa-toggle-off');
-
-    bodyStyle.setProperty('--white', '#fff');
-    bodyStyle.setProperty('--text-color', '#777');
-    bodyStyle.setProperty('--headings-color', '#444');
-    bodyStyle.setProperty('--items-bg-color', '#fff');
-  }
-
-})
 // Change navbar active class by scrolling
 // document.addEventListener('scroll', () => {
 

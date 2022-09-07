@@ -33,7 +33,6 @@ html(lang='en')
     header(id='contacts' class='header py-3 text-center')
 
       .container
-
         a(class='header__brand' href='#')
           img(src='img/logo.png' alt='Ahmed Ali | Front-end Developer')
 
@@ -50,7 +49,7 @@ html(lang='en')
     nav(id='nav' class='navbar')
       .container
 
-        button(id='navbar__toggler' class='navbar__toggler text-gray')
+        button(id='navbar__toggler' class='navbar__toggler')
           i(class="fa fa-bars fa-2x" aria-hidden="true")
 
         ul(class='navbar__nav d-flex text-center collapsed')
@@ -62,10 +61,6 @@ html(lang='en')
               li.nav-item
                 a(class="text-gray " href='#'+item)= item
 
-        button(id='dark-mode' class='dark-mode text-gray d-flex')
-          i(class="fa fa-sun-o" aria-hidden="true")
-          i(class="fa fa-toggle-off fa-2x" aria-hidden="true")
-          i(class="fa fa-moon-o" aria-hidden="true")
 
 
 
@@ -141,7 +136,7 @@ html(lang='en')
               p= content.name 
               p= content.by 
               p
-                a(class='text-green' href='#')= content.link  
+                a(class='text-green' href='#')= content.link 
                 span.text-green | 
                 span= content.date 
 
