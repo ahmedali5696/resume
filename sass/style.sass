@@ -1,19 +1,26 @@
 // Main Colors //
 /////////////////
-$green: #46c757
-$gray: #777
-$dark-gray: #444
+$green: var(--main-color)
+$gray: var(--text-color)
+$dark-gray: var(--headings-color)
+$white: var(--white)
+$bg-white: var(--items-bg-color)
 
+\:root
+  --main-color: #46c757
+  --text-color: #777
+  --headings-color: #444
+  --white: #fff
+  --items-bg-color: #fff
 
 /** GENERIC **/
 html
   scroll-behavior: smooth
 
-
-body
-	font-family: 'Lato', sans-serif
-	color: $gray
-
+body 
+  font-family: 'Lato', sans-serif 
+  color: $gray 
+  background-color: $white
 
 h2
   position: relative
@@ -107,6 +114,7 @@ ul
 
 /* Header */
 .header
+  position: relative
   font-size: clamp(1em, 1.7vw, 1.2em)
 
 
@@ -124,8 +132,8 @@ ul
   position: sticky
   top: 0
   z-index: 2
-  box-shadow: 0 11px 18px -15px
-  background-color: #fff
+  box-shadow: 0 11px 18px -15px rgba(0, 0, 0, 0.8)
+  background-color: $white
 
   &__nav
     justify-content: center
@@ -155,6 +163,15 @@ ul
   a
     color: $green
 
+.dark-mode-btn
+  position: absolute
+  left: 12px
+  top: 12px
+  align-items: center
+  gap: 8px
+  background: transparent
+  border: none
+  cursor: pointer
 
 
 
@@ -181,7 +198,8 @@ ul
   padding:
     right: 10px
     left: 10px
-  box-shadow: 0 1px 23px -8px
+  box-shadow: 0 1px 18px -10px #000
+  background-color: $bg-white
   transition: .2s
 
   &:hover
@@ -206,7 +224,7 @@ ul
     content: ''
     position: absolute
     width: 3px
-    background-color: #77777777
+    background-color: $gray
     top: 0
     bottom: 0
     left: 50%
@@ -224,7 +242,7 @@ ul
       right: 30px
       border: medium solid white
       border-width: 10px 0 10px 10px
-      border-color: transparent transparent transparent white
+      border-color: transparent transparent transparent $white
 
   .right 
     left: 50%
@@ -238,7 +256,7 @@ ul
       left: 30px
       border: medium solid white
       border-width: 10px 10px 10px 0
-      border-color: transparent white transparent transparent
+      border-color: transparent $white transparent transparent
     &::after
       left: -14px
       
@@ -260,8 +278,9 @@ ul
     
   .item
     padding: 15px
-    box-shadow: 0 1px 30px -8px
     position: relative
+    box-shadow: 0 1px 18px -10px #000
+    background-color: $bg-white
     border-radius: 6px
 
     h4
@@ -330,7 +349,8 @@ ul
   display: grid
   grid-template-columns: repeat(3, 1fr)
   grid-gap: 1.5em
-  box-shadow: 0 1px 18px -8px;
+  box-shadow: 0 1px 18px -10px #000
+  background-color: $bg-white
   padding: 0 15px
 
   p:nth-of-type(2)
@@ -376,7 +396,7 @@ ul
     .left::before,
     .right::before
       border-width: 10px 10px 10px 0px;
-      border-color: transparent white transparent transparent;
+      border-color: transparent $white transparent transparent;
 
     .right::before
       left: 60px
@@ -394,7 +414,7 @@ ul
     left: 60px
     border: medium solid white
     border-width: 10px 10px 10px 0
-    border-color: transparent white transparent transparent
+    border-color: transparent $white transparent transparent
 
 
   /* Portfolio */
