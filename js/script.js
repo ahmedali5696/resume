@@ -23,16 +23,16 @@ navbarList.addEventListener('click', (e) => {
 })
 
 
+// Dark mode button 
 darkModeBtn.addEventListener('click', () => {
+  document.querySelector('body').classList.toggle('dark-mode');
   darkModeBtn.classList.toggle('dark');
 
   if (darkModeBtn.classList.contains('dark')) {
     darkModeBtn.querySelectorAll('i')[1].classList.replace('fa-toggle-off', 'fa-toggle-on');
-    document.querySelector('body').classList.add('dark-mode');
-
+    
   } else {
     darkModeBtn.querySelectorAll('i')[1].classList.replace('fa-toggle-on', 'fa-toggle-off');
-    document.querySelector('body').classList.remove('dark-mode');
   }
 
 })
