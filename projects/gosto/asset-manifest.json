@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.38d5ece4.css",
-    "main.js": "/static/js/main.6660609e.js",
-    "static/media/404.jpg": "/static/media/404.1a5814c649c0d0e68832.jpg",
-    "static/media/cart.png": "/static/media/cart.427f0fe88453c51d151d.png",
-    "static/media/logo.svg": "/static/media/logo.9b0b58f362a0cbe507915370c759b3d6.svg",
-    "index.html": "/index.html",
-    "main.38d5ece4.css.map": "/static/css/main.38d5ece4.css.map",
-    "main.6660609e.js.map": "/static/js/main.6660609e.js.map"
+    "main.css": "/resume/projects/gosto/static/css/main.38d5ece4.css",
+    "main.js": "/resume/projects/gosto/static/js/main.ba19f03a.js",
+    "static/media/404.jpg": "/resume/projects/gosto/static/media/404.1a5814c649c0d0e68832.jpg",
+    "static/media/cart.png": "/resume/projects/gosto/static/media/cart.427f0fe88453c51d151d.png",
+    "static/media/logo.svg": "/resume/projects/gosto/static/media/logo.9b0b58f362a0cbe507915370c759b3d6.svg",
+    "index.html": "/resume/projects/gosto/index.html",
+    "main.38d5ece4.css.map": "/resume/projects/gosto/static/css/main.38d5ece4.css.map",
+    "main.ba19f03a.js.map": "/resume/projects/gosto/static/js/main.ba19f03a.js.map"
   },
   "entrypoints": [
     "static/css/main.38d5ece4.css",
-    "static/js/main.6660609e.js"
+    "static/js/main.ba19f03a.js"
   ]
 }
