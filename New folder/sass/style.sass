@@ -1,0 +1,443 @@
+// Main Colors //
+/////////////////
+$green: var(--main-color)
+$gray: var(--text-color)
+$dark-gray: var(--headings-color)
+$white: var(--white)
+$bg-white: var(--items-bg-color)
+
+\:root
+  --main-color: #46c757
+  --text-color: #777
+  --headings-color: #444
+  --white: #fff
+  --items-bg-color: #fff
+
+
+.dark-mode
+  --text-color: #c7c7c7
+  --headings-color: #fff
+  --white: #1c1c1c
+  --items-bg-color: #141414
+
+
+/** GENERIC **/
+html
+  scroll-behavior: smooth
+
+body 
+  font-family: 'Lato', sans-serif 
+  color: $gray 
+  background-color: $white
+
+h2
+  position: relative
+  padding-bottom: 10px
+  margin: auto
+  max-width: 370px
+  color: $dark-gray
+  font-size: clamp(25px, 2.5vw, 1.9em)
+  text-transform: uppercase
+
+  &::before
+    content: ''
+    width: 50px
+    position: absolute
+    bottom: 0
+    left: 158px
+    border-bottom: 2px solid #444
+
+a
+  text-decoration: none
+
+  
+ul
+  padding: 0
+  list-style: none
+
+
+/** Classes **/
+.container
+  max-width: clamp(340px, 85%, 1200px)
+  margin: 
+    left: auto
+    right: auto
+  padding:
+    right: 1.5em
+    left: 1.5em
+
+
+.py-3
+  padding: 
+    top: 4rem
+    bottom: 4rem
+
+
+.text-center
+  text-align: center
+
+
+.mx-auto
+  margin: 
+    right: auto
+    left: auto
+
+
+.text-green
+  color: $green
+
+
+.text-gray
+  color: $gray
+
+
+.d-flex
+  display: flex
+
+.d-grid
+  display: grid
+
+
+
+/**** Componants ****/
+.social__links
+  justify-content: center
+  gap: 1em
+
+  i
+    color: $gray
+    transition: .2s
+
+  $socials: ('facebook': '#1877f2',
+  'github': '#000',
+  'codepen': '#ff3c41',
+  'linkedin': '#0077b5')
+
+  @each $name, $color in $socials  
+    i[class*='#{$name}']:hover
+      color: #{$color}
+
+
+
+
+/* Header */
+.header
+  position: relative
+  font-size: clamp(1em, 1.7vw, 1.2em)
+
+
+  &__brand
+    img
+      width: clamp(208px, 33%, 308px)
+
+
+
+
+
+/* Navbar */
+.navbar
+  padding: 1px
+  position: sticky
+  top: 0
+  z-index: 2
+  box-shadow: 0 11px 18px -15px rgba(0, 0, 0, 0.8)
+  background-color: $white
+
+  &__nav
+    justify-content: center
+    gap: calc(12px + 1.5625vw)
+
+    // .collapse
+    //   flex
+
+  &__toggler
+    display: none
+    margin-left: auto
+    padding: 10px
+    background-color: transparent
+    border: none
+    cursor: pointer
+
+  
+
+.nav-item
+  a
+    font-weight: 700
+    text-transform: capitalize
+    &:hover
+      color: $green
+
+.nav-item.active
+  a
+    color: $green
+
+.dark-mode-btn
+  position: absolute
+  left: 12px
+  top: 12px
+  align-items: center
+  gap: 8px
+  background: transparent
+  border: none
+  cursor: pointer
+
+
+
+/* Biography */
+.bio
+  p
+    max-width: 750px
+    padding: 0 10px
+
+
+
+
+/* Skills */
+.skills__container
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  grid-gap: 1.5em
+  margin-top: 2.5em
+
+
+.skills__item
+  
+  gap: 1.5em
+  align-items: center
+  padding:
+    right: 10px
+    left: 10px
+  box-shadow: 0 1px 18px -10px #000
+  background-color: $bg-white
+  transition: .2s
+
+  &:hover
+    background-color: $green
+    color: #fff
+    transform: scale(1.04)
+
+  img
+    width: 32px
+    height: 32px
+
+
+
+
+
+/* Education & Training */
+.edu-experince__timeline
+  position: relative
+  margin: 4rem auto
+
+  &::after
+    content: ''
+    position: absolute
+    width: 3px
+    background-color: $gray
+    top: 0
+    bottom: 0
+    left: 50%
+    margin-left: -3px
+
+  .left
+    left: -86px
+    &::before
+      content: " "
+      height: 0
+      position: absolute
+      top: 22px
+      width: 0
+      z-index: 1
+      right: 30px
+      border: medium solid white
+      border-width: 10px 0 10px 10px
+      border-color: transparent transparent transparent $white
+
+  .right 
+    left: 50%
+    &::before
+      content: " "
+      height: 0
+      position: absolute
+      top: 22px
+      width: 0
+      z-index: 1
+      left: 30px
+      border: medium solid white
+      border-width: 10px 10px 10px 0
+      border-color: transparent $white transparent transparent
+    &::after
+      left: -14px
+      
+
+.timeline__container
+  padding: 10px 40px
+  position: relative
+  width: 50%
+  &::after
+    content: ''
+    position: absolute
+    width: 25px
+    height: 25px
+    right: -17px
+    background-color: $dark-gray
+    top: 15px
+    border-radius: 50%
+    z-index: 1
+    
+  .item
+    padding: 15px
+    position: relative
+    box-shadow: 0 1px 18px -10px #000
+    background-color: $bg-white
+    border-radius: 6px
+
+    h4
+      margin: 0
+    p:nth-of-type(1)
+      color: $green
+    p:nth-of-type(2),p:nth-of-type(3)
+      font-size: .8em
+      font-weight: 300
+
+  
+  
+  
+
+/* Portfolio */
+.portfolio__container
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  grid-gap: 1.5em
+  margin-top: 2.5em
+
+.portfolio__item
+  position: relative
+  overflow: hidden
+  max-height: 300px
+  transition: .2s
+  background-color: #000
+  border-radius: 5px
+  box-shadow: 0 1px 18px -10px #000
+
+  &:hover
+    h4
+      transform: none
+
+    img
+      transform: scale(1.07)
+      opacity: 1
+
+  
+  h4
+    margin: 0
+    padding: 15px 0
+    position: absolute
+    bottom: 0
+    width: 100%
+    background-color: $green
+    color: #fff
+    transform: rotate(-32deg) translateY(116px)
+    transition: .2s
+
+
+.portfolio__img
+  width: 100%
+  height: 100%
+  opacity: 0.7
+  transition: all .2s ease-in-out
+
+
+
+
+/* Certifications */
+.certifications__container
+  flex-direction: column
+  gap: 20px
+  margin-top: 2em
+
+
+.certifications__item
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 1.5em
+  box-shadow: 0 1px 18px -10px #000
+  background-color: $bg-white
+  padding: 0 15px
+
+  p:nth-of-type(2)
+      font-weight: 600;
+
+  p:nth-of-type(3)
+    font-weight: 300;
+
+
+/**** Small Screen fixings ****/
+@media screen and (max-width: 576px)
+  h2::before 
+    left: 42%
+
+
+  /* Navebar collapsed */
+  .navbar__toggler
+    display: block
+
+  .navbar__nav.collapsed
+    display: none 
+
+  .navbar__nav
+    flex-direction: column
+
+
+  /* Education & Training */
+  .edu-experince
+    .container
+      padding-left: 0
+
+  .edu-experince__timeline
+    .left::after,
+    .right::after 
+      left: 15px
+
+    .left
+      left: 3px
+
+    .right 
+      left: 0%
+
+    .left::before,
+    .right::before
+      border-width: 10px 10px 10px 0px;
+      border-color: transparent $white transparent transparent;
+
+    .right::before
+      left: 60px
+
+  .edu-experince__timeline::after 
+    left: 31px
+  
+  .timeline__container
+    width: 70%
+    padding-left: 70px
+    padding-right: 25px
+  
+  
+  .timeline__container::before 
+    left: 60px
+    border: medium solid white
+    border-width: 10px 10px 10px 0
+    border-color: transparent $white transparent transparent
+
+
+  /* Portfolio */
+  .portfolio__container
+    grid-template-columns: auto
+
+
+  /* Certifications */
+  .certifications__item
+    grid-template-columns: auto
+    grid-gap: 0
+    p:nth-of-type(2)
+      margin: 0;
+
+    p:nth-of-type(3)
+      margin-top: 5px;
