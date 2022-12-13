@@ -1,0 +1,299 @@
+{
+  "certf": [
+    null,
+    {
+      "certfName": "Introduction to HTML5",
+      "date": "Jul, 2017",
+      "id": 2,
+      "institute": "By University of Michigan",
+      "link": "https://coursera.org/verify/HFYN7FP2VC4W",
+      "site": "Coursera"
+    },
+    {
+      "certfName": "Introduction to CSS3",
+      "date": "Sep, 2017",
+      "id": 3,
+      "institute": "By University of Michigan",
+      "link": "https://coursera.org/verify/F6DZNKZYWELA",
+      "site": "Coursera"
+    },
+    {
+      "certfName": "Front End Developer Track",
+      "date": "April, 2018",
+      "id": 4,
+      "institute": "By 1 Million Arab Coders initiative",
+      "link": "https://ahmedali5696.github.io/resume/",
+      "site": "Udacity"
+    },
+    {
+      "certfName": "Build your first web pages with Html and Css",
+      "date": "Oct, 2018",
+      "id": 5,
+      "institute": "By OpenClassrooms E-learning Platform",
+      "link": "https://openclassrooms.com/en/course-certificates/2797948573",
+      "site": "OpenClassrooms"
+    },
+    {
+      "certfName": "Interactivity with JavaScript",
+      "date": "Nov, 2018",
+      "id": 6,
+      "institute": "By University of Michigan",
+      "link": "https://coursera.org/verify/XTSRNDNT982H",
+      "site": "Coursera"
+    },
+    {
+      "certfName": "Advanced Styling with Responsive Design",
+      "date": "Nov, 2018",
+      "id": 7,
+      "institute": "By University of Michigan",
+      "link": "https://coursera.org/verify/MSJCNP36GSJZ",
+      "site": "Coursera"
+    },
+    {
+      "certfName": "Create web page layouts with CSS",
+      "date": "Dec, 2018",
+      "id": 8,
+      "institute": "By OpenClassrooms E-learning",
+      "link": "https://openclassrooms.com/en/course-certificates/6125614905",
+      "site": "OpenClassrooms"
+    },
+    {
+      "certfName": "Web Design for Everybody Capstone",
+      "date": "Apr, 2020",
+      "id": 9,
+      "institute": "By University of Michigan",
+      "link": "https://coursera.org/verify/FGAPWXNF5ZSZ",
+      "site": "Coursera"
+    },
+    {
+      "certfName": "Specialization - Web Design for Everybody",
+      "date": "Apr, 2020",
+      "id": 10,
+      "institute": "By University of Michigan",
+      "link": "https://coursera.org/verify/specialization/3SZCNYYPEVUB",
+      "site": "Coursera"
+    },
+    {
+      "certfName": "Advanced React",
+      "date": "Oct, 2022",
+      "id": 11,
+      "institute": "By Bob Ziroll",
+      "link": "https://scrimba.com/certificate/uxKKq2f3/greact",
+      "site": "Scrimba"
+    }
+  ],
+  "experiances": [
+    {
+      "company": "Helwan University",
+      "date": {
+        "from": "Sep 2015",
+        "to": " Jul 2021"
+      },
+      "description": " I studied in the Department of Geography",
+      "id": 1,
+      "title": "Faculty of Arts"
+    },
+    {
+      "company": "Amit Learning",
+      "date": {
+        "from": "Jul 2018",
+        "to": "Sep 2018"
+      },
+      "description": "I'v trained for Js, Pug and SASS",
+      "id": 2,
+      "title": "UI Development"
+    }
+  ],
+  "portfolio": [
+    {
+      "codeLink": "https://github.com/ahmedali5696/html_css/tree/main/Twitter",
+      "description": "Simple design (Float CSS)",
+      "id": 1,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Ftwitter.jpg?alt=media&token=4088416f-6164-43df-88e8-b0d40bfa0a63",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/twitter",
+      "name": "Twitter"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/html_css/tree/main/Elite",
+      "description": "Responsive with Bootstrap 4",
+      "id": 2,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Felite.jpg?alt=media&token=93431db5-ee81-4a49-be17-414efe350bfe",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/elite-corp",
+      "name": "EliteCorp"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/html_css/tree/main/Landing%20Page",
+      "description": "Pug, SASS, Jquery and Owl Carousel",
+      "id": 3,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Flanding.jpg?alt=media&token=618912d8-8768-4fdc-88a4-c48c982f4890",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/Landing/",
+      "name": "Landing"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/Pug_Sass/tree/main/XeOne",
+      "description": "Pug & SASS",
+      "id": 4,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Ftheone.jpg?alt=media&token=5cb0d303-c06a-41c5-b905-b3b95ab9d8e7",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/xeone",
+      "name": "XeOne"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/resume/tree/master/projects/bondi",
+      "description": "Bootstrap 5",
+      "id": 5,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2FBondi.jpg?alt=media&token=f1f63003-2cd9-4035-a4ef-d70101ca9d8a",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/bondi",
+      "name": "Bondi"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/resume/tree/master/projects/theone",
+      "description": "Bootstrap and Pug - sass",
+      "id": 6,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2FTheOne.jpg?alt=media&token=b399f466-4aae-4da8-bf6d-7898f50daeb7",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/theone",
+      "name": "The One"
+    },
+    {
+      "codeLink": "https://ahmedali5696.github.io/resume/projects/Validation%20Form",
+      "description": "Regular Expressions JS",
+      "id": 7,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Fvalidation.png?alt=media&token=75dfdd9c-d2b8-4987-aa7d-b93750e49fa3",
+      "liveLink": "https://github.com/ahmedali5696/javascript/tree/main/Validation%20Form",
+      "name": "Validation Form"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/javascript/tree/main/To%20do%20list",
+      "description": "Used local storage (get, add and remove)",
+      "id": 8,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Ftodo.png?alt=media&token=c29dd80b-045e-43c3-9e89-5bcaa8c17b3c",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/to-do%20list",
+      "name": "To-do List - JS"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/javascript/tree/main/Gussing%20Number",
+      "description": " Vanila js - DOM",
+      "id": 9,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Fgussing.png?alt=media&token=bcca10c4-fb0c-4abc-9bf2-878a5aeb1796",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/Gussing%20Number",
+      "name": "Number Guessur - DOM JS"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/javascript/tree/main/Weather%20App",
+      "description": "Used async/await and fetch to apis",
+      "id": 10,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Fweather.png?alt=media&token=8fdc5548-227a-4689-868c-8322191a4282",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/JS%20-%20Weather%20App",
+      "name": "Weather app - JS"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/javascript/tree/main/Calories%20Calculator",
+      "description": "local storage add/modify JS & OOP",
+      "id": 11,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Fcalories.png?alt=media&token=8afd56d1-d093-4c14-886a-7b0d02187332",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/Calories%20Calculator",
+      "name": "Tracalori - JS"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/javascript/tree/main/Book%20List",
+      "description": "Vanila JS, Loacl Storage, OOP",
+      "id": 12,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Fbook.png?alt=media&token=45d60068-416a-415c-be8e-003a748ea17c",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/Book%20List",
+      "name": "Book List - JS"
+    },
+    {
+      "codeLink": "https://github.com/ahmedali5696/React/tree/main/6.Gosto%20eCommerce",
+      "description": "ReactJS - Redux Toolkit - Router",
+      "id": 13,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/portfolio%2Fgosto.jpg?alt=media&token=ff14bb3b-1d07-48d7-846a-9b10e61a3c60",
+      "liveLink": "https://ahmedali5696.github.io/resume/projects/gosto",
+      "name": "Gosto eCommerce "
+    }
+  ],
+  "profile": [
+    {
+      "about": "Front-end Developer with React, I love working so much and I always look forward to gaining knowledge. I have worked on many projects with CSS frameworks, JS and React.I always strive to learn, gain experiences and participate in the most difficult work and make it a challenge for me and give him the best of what I have.",
+      "cv": "https://drive.google.com/file/d/1LWilHSTU4qDOusOlNwsy4M-6Rqp_n1tN/view?usp=share_link",
+      "fullname": "Ahmed Ali Abdelwahab",
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/profile%2Fprofile.jpg?alt=media&token=41632852-9523-4973-91a8-29c3fcb5e7d5",
+      "jop": "Frontend Web Developer (React & NextJS)"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fnext.png?alt=media&token=455b6805-1aa7-477f-97f4-196826ec7228",
+      "name": "NextJS"
+    },
+    {
+      "id": 2,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Freact.png?alt=media&token=4a0052fa-2c8e-498d-952e-b3834641fc9b",
+      "name": "React"
+    },
+    {
+      "id": 3,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Ftailwind.png?alt=media&token=f9eacdef-bfb1-42eb-91fe-3f0c19b4c7a5",
+      "name": "Tailwind"
+    },
+    {
+      "id": 4,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Ffirebase.png?alt=media&token=857f1cfa-d23a-401f-bca1-9da0db5ab0ea",
+      "name": "Firebase"
+    },
+    {
+      "id": 5,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fjs.png?alt=media&token=a8d6c1e5-85c0-462c-846e-885794568c72",
+      "name": "JavaScript"
+    },
+    {
+      "id": 6,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fsass.png?alt=media&token=bbfb0046-34b1-4398-b10e-8a0bf506e9bb",
+      "name": "Sass"
+    },
+    {
+      "id": 7,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fpug.png?alt=media&token=56a05f88-b64e-4234-ba4f-a81d033de96d",
+      "name": "Pug"
+    },
+    {
+      "id": 8,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fjquery.png?alt=media&token=fdd57c47-2bbe-49ae-872f-a2c3cff989a2",
+      "name": "jQuery"
+    },
+    {
+      "id": 9,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fjson.png?alt=media&token=bddb8a66-36b3-451d-bc29-b4866ee8b9bc",
+      "name": "JSON"
+    },
+    {
+      "id": 10,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fajax.png?alt=media&token=73b24d30-28e2-4bea-9d82-e87bd93520f7",
+      "name": "Ajax"
+    },
+    {
+      "id": 11,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fgit.png?alt=media&token=526d1b92-3a63-4a71-b430-86f12969d806",
+      "name": "Git"
+    },
+    {
+      "id": 12,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fbootstrap.png?alt=media&token=6e51ab0b-ab0c-47e3-abbc-4a8f5e830e61",
+      "name": "Bootstrap"
+    },
+    {
+      "id": 13,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fwebpack.png?alt=media&token=0948e027-6b12-4f82-8fca-e302f21355f3",
+      "name": "Webpack"
+    },
+    {
+      "id": 14,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Fps.png?alt=media&token=1848fd62-eb6d-47d3-adfa-7dc7e5c156ac",
+      "name": "Photoshop"
+    },
+    {
+      "id": 15,
+      "img": "https://firebasestorage.googleapis.com/v0/b/app-auth-17e47.appspot.com/o/skills%2Ffigma.png?alt=media&token=fb3b8ef1-efca-43ac-94eb-3860452e0aa4",
+      "name": "Figma"
+    }
+  ]
+}
